@@ -1,0 +1,26 @@
+:%s/Aleksandra/Jurek/g
+:%s/Szczepañska/Okrasa/g
+:%s/aleksandra.szczepanska@example.com/jurek.okrasa@example.com/g
+:%s/aleksandra.szczepanska/jurek.okrasa2/g
+:%s/3E1GMU0NJJX4ASG05P5PJFNQBXPITS0Q/9TLCBMK6GTNR7JXHZNDT63YYBT1MMCJY/g
+:%s/Zofia Michalska/Jurek Okrasa/g
+:%s/Kacper Kowalski/Julianna Kaczmarek/g
+:%s/Julianna/Olga/g
+:%s/Kaczmarek/Kurek/g
+:%s/julianna.kaczmarek@example.com/olga.kurek@mail.com/g
+:%s/julianna.kaczmarek/olga.kurek2/g
+:%s/D1LW0QQQVESU5XHBKVOMM3CZFYZIMHDZ/PWZN6DVSLN1KYT47AW2Z7302MO4P9UXJ/g
+:%s/32d9e4d5-f2bc-4e98-ba36-13a20b8cdc95/7bce3b05-f962-473a-ad41-545f06148e99/g
+:%s/35ec2d52-7ba1-49b0-b4e9-9e2f06b31c0a/c9f4825e-7e3e-48ab-b6ac-f54ad19d73e8/g
+:%s/03867192-c7fb-2831-3692-962bcae831d7/395fcb54-d8cd-4931-9676-2074fea695ee/g
+:%s/05234970-2a78-1607-b793-201bfd687e59/9db38b4d-0e56-4986-9fc0-0ffbe552e00c/g
+:%s/04286173-0c6b-9807-7b32-a9230e4f17b6/dcab338f-6981-4d28-b395-f4e853283861/g
+:%s/07965834-b96c-6201-09f7-fc08b24365a9/08dd6d5d-7683-4b4b-a978-e3c3edd8f2b6/g
+:%s/ 39,/ 61,/g
+:%s/ 39)/ 61)/g
+:%s/'39'/'61'/g
+:%s/ 50,/ 63,/g
+:%s/ 50)/ 63)/g
+:%s/'50'/'63'/g
+:%s/PL53237995598403389748942806/PL28814919417210050384603558/g
+:%s/PL30750445747504020576935746/PL67086490978622364199404509/g

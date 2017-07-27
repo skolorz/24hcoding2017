@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    platform:
+    url: jdbc:postgresql://localhost:5432/confirmation
+    username: postgres
+    password: C0nf1rmat10nDb
+    sql-script-encoding: utf-8
+  thymeleaf:
+    cache: false
+  jpa:
+    hibernate:
+       ddl-auto: none
+    properties:
+      hibernate:
+        show_sql: false
+        use_sql_comments: false
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mvc.favicon.enabled: false
+server:
+  context-path: /
+  port: 80

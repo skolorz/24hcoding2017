@@ -1,0 +1,19 @@
+group 'pl.lczyrny'
+version '2.1-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "pl.lczyrny.password.Application"
+
+dependencies {
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

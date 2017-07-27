@@ -1,0 +1,18 @@
+FROM postgres:latest
+
+MAINTAINER inghackathon2017
+
+EXPOSE 5432
+
+RUN mkdir /var/envs
+
+COPY .docker/sql/* /docker-entrypoint-initdb.d/
+ENV ADMIN_SCRIPT /docker-entrypoint-initdb.d/0003_admin.sql
+
+CMD \
+   chmod +x /var/envs/import.sh &&\
+   eval $(/var/envs/import.sh) &&\
+   echo $API_HOST &&\
+   sed -i "s|USER_PASS|${USER_PASS}|g" $ADMIN_SCRIPT &&\
+   sed -i "s|USER_SALT|${USER_SALT}|g" $ADMIN_SCRIPT &&\
+   /docker-entrypoint.sh postgres

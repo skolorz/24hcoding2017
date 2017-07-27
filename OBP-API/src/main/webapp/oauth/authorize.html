@@ -1,0 +1,25 @@
+<div class="lift:surround?with=no-menu-template;at=content">
+    <!-- Valid Token -->
+    <div class="lift:OAuthAuthorisation.tokenCheck row" id="authorizeSection">
+        <div class="login-error"></div>
+        <div class="token-error"></div>
+        <div id="bank_logo"></div>
+        <div id="appAskBloc">
+            <h2 id="appName"><span id="applicationName"> web app </span></h2>
+            <h4 id="appPermision">is asking for access to your account data</h4>
+        </div>
+
+        <!-- TOKEN  VERIFICATION -->
+        <div class="lift:embed?what=login_token_verify" id="tokenVerifyBloc"></div>
+
+        <!-- LOGGED OUT -->
+        <div class="lift:embed?what=_login_from_app" id="loginBloc"></div>
+        <div class="error-msg">
+            <div id="errorMessage">Error message</div>
+        </div>
+    </div>
+    <div id="copy" class="row">
+        <div class="col-xs-6 text-left">&copy; 2017 ING Bank Śląski S.A.</div>
+        <div class="col-xs-6 text-right">Infolinia: 801 601 607 lub 32 357 00 10</div>
+    </div>
+</div>

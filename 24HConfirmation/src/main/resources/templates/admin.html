@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
+<head>
+    <meta charset="utf-8"/>
+    <title>24H-CodING | Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" th:href="@{/resources/font-awesome-4.7.0/css/font-awesome.min.css}" href="/resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/resources/main.css}" href="/resources/main.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="col-xs-12 header">
+        <img src="/resources/logo.png" id="logo" alt="logo"/>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 no-padding item">
+            <div class="orange">
+                <img src="/resources/baner.png" alt="baner" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-15">
+        <div class="col-xs-8">
+            <h1>Hackathon users</h1>
+        </div>
+        <div class="col-xs-4 text-right">
+            <h1 th:text="${confirmedPart}"></h1>
+        </div>
+        <div class="col-xs-12"><hr/></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Lp</th>
+                    <th>Team</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Status</th>
+                    <th>UpdatedAt</th>
+                </tr>
+                <th:block th:each="user, row : ${users}">
+                    <tr>
+                        <td th:text="${row.index+1}"></td>
+                        <td th:text="${user.teamName}"></td>
+                        <td th:text="${user.userName}"></td>
+                        <td th:text="${user.email}"></td>
+                        <td th:text="${user.status.name()}"></td>
+                        <td th:text="${user.updatedAt}"></td>
+                    </tr>
+                </th:block>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<script src="/webjars/jquery/2.0.3/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+<script src="http://bootboxjs.com/bootbox.js"></script>
+
+</body>
+</html>

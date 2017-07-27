@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+
+
+<head>
+    <meta charset="utf-8"/>
+    <title>24H-CodING | Confirmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <link rel="stylesheet" th:href="@{../resources/font-awesome-4.7.0/css/font-awesome.min.css}" href="../resources/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{../resources/main.css}" href="../resources/main.css" />
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="col-xs-12 header">
+        <img src="../resources/logo.png" id="logo" alt="logo"/>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 no-padding item">
+            <div class="orange">
+                <img src="../resources/baner.png" alt="baner" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top-15">
+        <div class="col-xs-12">
+            <p th:switch="${user.status.name()}">
+                <h1 th:case="'WAITING'">Confirm your attendance</h1>
+                <h1 th:case="'DECLINED'">You have been removed from 24h-Coding Hackathon.</h1>
+                <h1 th:case="'CONFIRMED'">You have confirmed your attendance.</h1>
+            </p>
+            <p style="font-size: 16px; padding-top:10px;" th:if="${user.status.name()=='WAITING'}">
+                Congratulations, your team was qualified to 24H-CodING! Please confirm your attendance by midnight on <strong>Tuesday, April 11th.</strong>
+            </p>
+            <hr/>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12">
+            <form method="post" th:action="@{/confirmation/confirm}" >
+                <div class="row" style="display:flex; flex-wrap: wrap; padding: 5px 0;">
+                    <div class="col-sm-8 col-xs-12 action item">
+                        <table class="user">
+                            <tr><td><label class="header">Team:</label></td><td><label th:text="${user.teamName}"></label></td></tr>
+                            <tr><td><label class="header">Name:</label></td><td><label th:text="${user.userName}"/></td></tr>
+                            <tr><td><label class="header">Email:</label></td><td><label th:text="${user.email}"></label></td></tr>
+                        </table>
+                        <input type="hidden" name="token" th:value="${user.token}"/>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 item action" th:if="${user.status.name()=='WAITING'}">
+                        <button type="submit" class="btn btn-primary btn-lg col-xs-12">Confirm</button>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 item action" th:if="${user.status.name()=='CONFIRMED'}">
+                        <img style="display:none" class="img-responsive" th:src="@{../resources/happy.png}"/>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 item action" th:if="${user.status.name()=='DECLINED'}">
+                        <img style="display:none" class="img-responsive" th:src="@{../resources/sad.png}"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+    <label class="header" th:if="${user.status.name()=='DECLINED'}">Contact:  <a class="decline-link" href="mailto:24hcoding@ing.com">24hcoding@ing.com</a></label>
+
+    <div class="row margin-bottom-25" th:if="${user.status.name()=='WAITING' || user.status.name()=='CONFIRMED'}">
+        <div class="col-xs-12">
+            <form method="post" id="decline" th:action="@{/confirmation/decline}" class="decline" >
+                <input type="hidden" name="token" th:value="${user.token}"/>
+                <label>If for any reason you can't participate, click </label>
+                <a id="decline-link" class="decline-link">here</a>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="../webjars/jquery/2.0.3/jquery.min.js"></script>
+<script src="../webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+<script src="http://bootboxjs.com/bootbox.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.action img').fadeIn(2000);
+    });
+    $('#decline-link').click(function() {
+        bootbox.confirm({
+            message: "Are you sure you want to decline?",
+            buttons: {
+                confirm: {
+                    label: 'Yes',
+                    className: 'btn-primary'
+                },
+                cancel: {
+                    label: 'No',
+                    className: 'btn-default'
+                }
+            },
+            callback: function(result){
+                if(result) {
+                    $('#decline').submit();
+                }
+            }
+        });
+        return false;
+    });
+</script>
+</body>
+</html>

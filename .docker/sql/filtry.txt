@@ -1,0 +1,20 @@
+
+grep aleksandra.szczepanska@example.com 0001* > podwojne.sql
+grep julianna.kaczmarek@example.com 0001* >> podwojne.sql
+grep 2d9e4d5-f2bc-4e98-ba36-13a20b8cdc95  0001* >> podwojne.sql 
+grep 5ec2d52-7ba1-49b0-b4e9-9e2f06b31c0a  0001* >> podwojne.sql
+grep 03867192-c7fb-2831-3692-962bcae831d7 0001* >> podwojne.sql 
+grep 05234970-2a78-1607-b793-201bfd687e59 0001* >> podwojne.sql 
+grep 32d9e4d5-f2bc-4e98-ba36-13a20b8cdc95 0001* >> podwojne.sql
+grep 35ec2d52-7ba1-49b0-b4e9-9e2f06b31c0a 0001* >> podwojne.sql
+
+grep 06710598-dba6-8491-163f-1872fde64a0b 0001* >> podwojne.sql 
+grep 09257483-4fb9-9016-b53e-7eb26f0a49d3 0001* >> podwojne.sql 
+
+grep 04286173-0c6b-9807-7b32-a9230e4f17b6 0001* >> podwojne.sql
+grep 07965834-b96c-6201-09f7-fc08b24365a9 0001* >> podwojne.sql
+
+sort podwojne.sql|uniq|grep -v mappedentitlement > podwojne-u.sql
+
+grep -v 04286173-0c6b-9807-7b32-a9230e4f17b6	podwojne-u.sql | grep -v 07965834-b96c-6201-09f7-fc08b24365a9 > podwojne1.sql
+grep -v 06710598-dba6-8491-163f-1872fde64a0b	podwojne-u.sql | grep -v 09257483-4fb9-9016-b53e-7eb26f0a49d3 > podwojne2.sql

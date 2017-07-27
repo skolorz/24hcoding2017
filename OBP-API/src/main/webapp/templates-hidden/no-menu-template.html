@@ -1,0 +1,76 @@
+<!--
+Open Bank Project - API
+Copyright (C) 2011-2015, TESOBE Ltd.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Email: contact@tesobe.com
+TESOBE Ltd.
+Osloerstrasse 16/17
+Berlin 13359, Germany
+
+  This product includes software developed at
+  TESOBE (http://www.tesobe.com/)
+  by
+  Simon Redfern : simon AT tesobe DOT com
+  Stefan Bethge : stefan AT tesobe DOT com
+  Everett Sochowski : everett AT tesobe DOT com
+  Ayoub Benali: ayoub AT tesobe DOT com
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title class="lift:Menu.title">Open Bank Project: %*%</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Smythe" rel="stylesheet">
+    <link href="/media/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/media/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="/media/css/app-form.css" rel="stylesheet" type="text/css">
+    <link href="/media/font-awesome/css/font-awesome.css">
+
+    <script src="/media/js/jquery-3.2.0.min.js" type="text/javascript"></script>
+    <script src="/media/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body class="lift:OAuthAuthorisation.bankClass">
+<div>
+    <div class="container">
+        <lift:bind name="content"/>
+        The main content gets bound here
+    </div>
+</div>
+<script type="text/javascript">
+    $(window).resize(function() {
+        var windowH = $(window).height();
+        var el = $("#authorizeSection");
+        if(el.outerHeight() < windowH) {
+            var m = ((windowH - el.outerHeight()) / 2)+20;
+            el.css('margin-top',m);
+        }
+    });
+    $(window).resize();
+    $(document).ready(function() {
+        if($('body').is('.gringotts')) {
+            $('#bank_logo').prependTo('#formSection');
+            $('#formSection input[type=submit]').appendTo('#authorizeSection').click(function(){ $('#formSection form').submit(); });
+        }
+        if($('#termsSection').length > 0) {
+            $('#authorizeSection').addClass('terms');
+        }
+    });
+</script>
+</body>
+</html>

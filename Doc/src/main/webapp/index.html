@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>24H-CodING | Documentation</title>
+    <link rel="stylesheet" href="resources/main.css">
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://s3-eu-west-1.amazonaws.com/crowded-templates-eu/partials/custom/24hcoding_poland_2017/favicon.png?v=6f5495a">
+</head>
+<body>
+<!--<header></header>-->
+<div id="wrapper">
+
+    <!-- top -->
+    <section id="top">
+        <a href="#"><img src="resources/logo.png" id="logo" alt="logo"/></a>
+    </section>
+
+    <!-- main -->
+    <section id="main">
+        <a id="back-to-top" href="#" class="btn btn-primary btn-lg" role="button" title="Click to return on the top page"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <!-- side menu -->
+        <aside id="menu" class="bordered">
+            <a href="#" class="big"><h2><i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</h2></a>
+            <a href="#howtostart">How to start</a>
+            <a href="#logins">Client logins</a>
+            <a href="https://24hcoding.com/">24H-CodING</a>
+            <img src="resources/sep.png" alt="sep" class="separator"/>
+            <h2><i class="fa fa-code fa-fw" aria-hidden="true"></i> Code examples</h2>
+            <a href="#php">PHP</a>
+            <a href="#java">Java</a>
+            <a href="#android">Android</a>
+            <a href="#scala">Scala</a>
+            <img src="resources/sep.png" alt="sep" class="separator"/>
+            <h2><i class="fa fa-hand-pointer-o fa-fw" aria-hidden="true"></i> API endpoints</h2>
+            <div id="scroll">
+            <!--<a href="#2_1_0-getConsumer">Get Consumer</a>
+            <a href="#2_1_0-getConsumers">Get Consumers</a>-->
+            <a href="#2_0_0-coreAccountById">Get Account by Id (Core)</a>
+            <a href="#2_0_0-accountById">Get Account by Id (Full)</a>
+            <a href="#2_0_0-privateAccountsAllBanks">Get Accounts at all Banks (Private)</a>
+            <a href="#2_0_0-allAccountsAtOneBank">Get Accounts at one Bank (Public and Private).</a>
+            <a href="#2_0_0-getCoreTransactionsForBankAccount">Get Transactions for Account (Core)</a>
+            <a href="#1_2_1-getTransactionsForBankAccount">Get Transactions for Account (Full)</a>
+            <a href="#1_2_1-getViewsForBankAccount">Get Views for Account.</a>
+            <a href="#1_2_1-allAccountsAtOneBank">Get accounts at one bank.</a>
+            <a href="#1_2_1-privateAccountsAtOneBank">Get private accounts at one bank.</a>
+            <a href="#1_2_1-publicAccountsAtOneBank">Get public accounts at one bank.</a>
+            <a href="#1_2_1-getTransactionByIdForBankAccount">Get transaction by id.</a>
+            <a href="#1_2_1-updateAccountLabel">Update Account Label.</a>
+            <a href="#1_2_1-updateViewForBankAccount">Update View.</a>
+            <a href="#1_2_1-bankById">Get Bank</a>
+            <a href="#1_4_0-getAtms">Get Bank ATMS</a>
+            <a href="#2_1_0-getBranch">Get Bank Branch</a>
+            <a href="#1_4_0-getBranches">Get Bank Branches</a>
+            <a href="#2_1_0-getProduct">Get Bank Product</a>
+            <a href="#1_4_0-getProducts">Get Bank Products</a>
+            <a href="#1_2_1-allBanks">Get Banks</a>
+            <a href="#2_1_0-getTransactionRequestTypesSupportedByBank">Get the Transaction Request Types.</a>
+            <a href="#2_0_0-addSocialMediaHandle">Add Social Media Handle</a>
+            <a href="#2_0_0-getSocialMedia">Get social media handles for a customer</a>
+            <a href="#1_2_1-addTagForViewOnTransaction">Add a tag.</a>
+            <a href="#1_2_1-deleteTagForViewOnTransaction">Delete a tag.</a>
+            <a href="#1_2_1-getTagsForViewOnTransaction">Get tags.</a>
+            <a href="#2_0_0-getCurrentUser">Get User (Current)</a>
+            <a href="#2_0_0-getUser">Get Users by Email Address</a>
+            <a href="#2_0_0-getCustomers">Get all customers for logged in user</a>
+            <a href="#1_2_1-getCounterpartiesForBankAccount">Get counterparties of one account.</a>
+            <a href="#1_2_1-getCounterpartyForTransaction">Get Counterparty of Transaction</a>
+            <a href="#2_0_0-answerTransactionRequestChallenge">Answer Transaction Request Challenge.</a>
+            <a href="#2_1_0-createTransactionRequestSepa">Create Transaction Request (SEPA)</a>
+            <a href="#2_1_0-createTransactionRequest">Create Transaction Request.</a>
+            </div>
+        </aside>
+
+        <!-- content -->
+        <div id="content">
+            <!-- home -->
+            <div style="background-color:#ff6200;text-align:center;margin-bottom:20px;-webkit-border-radius: 5px;-moz-border-radius: 5px; border-radius: 5px; ">
+                <a href="https://24hcoding.com/"><img src="resources/banner-hackathon-1093x222px.png" alt="baner" style="margin:20px auto;width:100%;max-width:1024px;"/></a>
+            </div>
+            <div>
+                <div class="box">
+                    <div class="gray"><i class="fa fa-code fa-fw" aria-hidden="true"></i></div>
+                    <p>
+                        <h7>Code examples</h7>
+                        We provided some code examples in different languages, which can show You how to authorize APP and make some API calls with or without input data.
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="gray"><i class="fa fa-hand-pointer-o fa-fw" aria-hidden="true"></i></div>
+                    <p>
+                        <h7>API endpoints</h7>
+                        List of all available API endpoints. Please note that some of them requires input data in form of a JSON object.
+                    </p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:20px;" class="bordered">
+                <a href="#howtostart"><h2 style="display:inline-block;vertical-align:top;"><i class="fa fa-play-circle" aria-hidden="true"></i> How to start</h2></a>
+            </div>
+            <div style="text-align:center;margin-top:20px;" class="bordered">
+                <a href="#logins"><h2 style="display:inline-block;vertical-align:top;"><i class="fa fa-users" aria-hidden="true"></i> Clients logins</h2></a>
+            </div>
+            <div>
+                <a id="howtostart" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>How to start</h3>
+                    <p>Please follow these steps to quickly start cod<span class="o">ING</span>.</p>
+                    <h4>1. Know Your URLs</h4>
+                    <p class="indent">
+                        There are few URLs that You should be aware of:<br><br>
+                        <strong class="b">OBP_URL</strong>Base url of entire system. It will be provided.<br>
+                        <strong class="b">API_URL</strong>Base url of API endpoints: <span class="o">OBP_URL/obp/v2.1.0</span><br>
+                        <strong class="b">API_ENDPOINT</strong>Specific API endpoint: <span class="o">API_URL/banks</span><br>
+                        <strong class="b">SMS_AUTH</strong>Your sms APP with generated tokens: <span class="o">OBP_URL/sms-auth</span><br>
+                        <strong class="b"></strong>Some of API actions require second level authorization.<br>
+                        <strong class="b">DOC_URL</strong>This documentation: <span class="o">OBP_URL/docs</span>
+
+                    </p>
+                    <h4>2. Check OBP API</h4>
+                    <p class="indent">Please test all above URLs, in case of any problems, contact software support team. For example: <span class="o">API_URL/banks</span> should return JSON with available banks (this endpoint does not require authorization or app registration). </p>
+                    <h4>3. Register Your developer account</h4>
+                    <p class="indent">Under <span class="o">OBP_URL/user_mgt/login</span> You can register Your developer account (this account is needed only to generate API key for Your application).</p>
+                    <h4>4. Get API key</h4>
+                    <p class="indent">After registration, generate Your API key (the form will contain some fields about Your app). Save Your generated keys in APP configuration. </p>
+                    <h4>5. Authorize APP with OAuth 1.0 and SMS</h4>
+                    <p class="indent">
+                        API uses OAuth 1.0 authentication. When user is performing authorization process of Your APP he will be asked to provide his credentials in selected bank.<br><br>
+
+                        After successful authorization, login token will be generated and available at <span class="o">SMS_AUTH</span> web app. This token needs to be verified on the next page, along with accepting banks terms and conditions. Please check out code examples (PHP examples contains diagram with code steps) to find out how to use OAuth endpoints (initiate, authorize, token).<br><br>
+                        You will be provided with bank clients data credentials.<br><br>The <strong>OAuth bank redirect URL</strong> will be delivered for three banks:<br>
+                        <strong class="b">ING</strong><span class="o">OBP_URL/oauth_ing</span><br>
+                        <strong class="b">Gotham</strong><span class="o">OBP_URL/oauth_gotham</span><br>
+                        <strong class="b">Gringotts</strong><span class="o">OBP_URL/oauth_gringotts</span><br><br>
+                        Other OAuth URLs (common for all banks):<br>
+                        <strong class="b">REQUEST TOKEN</strong><span class="o">OBP_URL/oauth/initiate</span><br>
+                        <strong class="b">ACCESS TOKEN</strong><span class="o">OBP_URL/oauth/token</span><br>
+                    </p>
+                </div>
+            </div>
+            <div>
+                <a id="logins" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>Client logins</h3>
+                    <p>List of clients credentials in all provided banks.</p>
+                    <strong>ING Bank Śląski</strong>
+                    <p style="padding-left:20px;font-family:'Lucida Console';font-size:12px;">
+                        <span class="b">nadia.ciesielska</span> TswB8uDHY<br>
+                        <span class="b">tadeusz.piotrowski</span> eDFekmM5u4<br>
+                        <span class="b">alicja.lipinska</span> YuMW7wVWL<br>
+                        <span class="b">bartek.jastrzebski</span> jRa10tPnSCV<br>
+                        <span class="b">stanislaw.wozniak</span> lQPdM9apM<br>
+                        <span class="b">urszula.kowalewska</span> HUzjpMJlJl<br>
+                        <span class="b">cecylia.domagala</span> SMNKfP64PHRf<br>
+                        <span class="b">kinga.mikolajczyk</span> fRuGAQo0pSd<br>
+                        <span class="b">krzysztof.szymanski</span> GJ9AisMC7x<br>
+                        <span class="b">maksymilian.markowski</span> hyFbArum<br>
+                        <span class="b">karolina.orlowska</span> sI0ay5FceC<br>
+                        <span class="b">kamil.wojcik</span> x36FMyulP9en<br>
+                        <span class="b">kacper.grzelak</span> cvN5mfuTj8F<br>
+                        <span class="b">lena.kowalska</span> EsIAR1taM2<br>
+                        <span class="b">zofia.michalska</span> 7s45l6pzz6ca<br>
+                        <span class="b">julianna.kaczmarek</span> 1bNSTR
+                    </p>
+                    <strong>Gotham City Bank</strong>
+                    <p style="padding-left:20px;font-family:'Lucida Console';font-size:12px;">
+                        <span class="b">tomasz.malek</span> vn7OAp2wm<br>
+                        <span class="b">anna.nowicka</span> bMkw03dqv<br>
+                        <span class="b">marek.szewczyk</span> Vky70YVO03p<br>
+                        <span class="b">kaja.kaczmarek</span> tShZ3ZRu9s2v<br>
+                        <span class="b">oskar.matuszewski</span> KhW3MLZ8<br>
+                        <span class="b">kinga.brzezinska</span> 2VKByyHo<br>
+                        <span class="b">bruno.krawczyk</span> P8GuGpJXY<br>
+                        <span class="b">oliwier.urban</span> 1myyLN<br>
+                        <span class="b">maja.markowska</span> UobJFQ5bAxjF<br>
+                        <span class="b">mateusz.janicki</span> ghuDtgUb<br>
+                        <span class="b">filip.baran</span> gQjiRjDI<br>
+                        <span class="b">julia.krawczyk</span> SbADypP<br>
+                        <span class="b">kacper.kolodziej</span> KlLDI6<br>
+                        <span class="b">marika.piatek</span> ufMIUVyp3MfV<br>
+                        <span class="b">kaja.janiszewska</span> DV8Nmreau0uT<br>
+                        <span class="b">kacper.kowalski</span> ac4LeDi
+                    </p>
+                    <strong>The Bank Of Gringotts</strong>
+                    <p style="padding-left:20px;font-family:'Lucida Console';font-size:12px;">
+                        <span class="b">antoni.sokolowski</span> nL00nY<br>
+                        <span class="b">krzysztof.nowak</span> lhNkMjJbk<br>
+                        <span class="b">dawid.morawski</span> uE90LSmRaEbS<br>
+                        <span class="b">oliwia.piotrowska</span> TiRrKO<br>
+                        <span class="b">pawel.kaminski</span> eV3thf84rseQ<br>
+                        <span class="b">wiktoria.gorska</span> hAOE3LWAp9V<br>
+                        <span class="b">zofia.jasinska</span> LhsL4l<br>
+                        <span class="b">amelia.jablonska</span> KYk0yYOdkxn<br>
+                        <span class="b">aleksander.stepien</span> kvqaPMP1ir<br>
+                        <span class="b">antonina.nowak</span> PS4RG4rOf2k<br>
+                        <span class="b">piotr.jarosz</span> OkgBtEfUboYk<br>
+                        <span class="b">natasza.czaja</span> 7YXyDTSKE<br>
+                        <span class="b">dominik.czech</span> d5WFQZN<br>
+                        <span class="b">aleksandra.szczepanska</span> HSQgECPJ<br>
+                        <span class="b">patrycja.lewandowska</span> ydDjLkOtOd<br>
+                        <span class="b">hanna.mazurek</span> BwLWx73<br>
+                        <span class="b">bartek.kowalczyk</span> g8NMuNy<br>
+                        <span class="b">julia.zajac	gringotts</span> AHYeSZ
+                    </p>
+                </div>
+            </div>
+            <!-- /home -->
+
+            <!-- examples -->
+            <div>
+                <!-- php -->
+                <a id="php" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>Code examples: <strong>PHP</strong></h3>
+                    <p>
+                        Please read carefully example code with all comments. In comments You can find marking points [ex (1)] showing which step is currently preformed on the diagram below. If You want to develop PHP Web APP, please remember to install <strong>php_oauth.dll</strong> PHP extension (and also update Your php.ini file with this new extension). In this sample code, You will find APP authorization flow (steps from 1 to 6) and fetching data from OBP API when APP is authorized (steps 7 and 8)<br><br>
+                        <strong>Please note: </strong>some of OAuth API calls requires input data in POST in JSON format. In order to properly send this data, remember to set proper method and headers in fetch() method:<br>
+                        <code>$oAuth->fetch(<br>&nbsp;&nbsp;&nbsp;$config['obp_api_url'].'/some/input/method',<br>&nbsp;&nbsp;&nbsp;'{ "my":"json", "data":true }',<br>&nbsp;&nbsp;&nbsp;OAUTH_HTTP_METHOD_POST,<br>&nbsp;&nbsp;&nbsp;array('Content-Type' => 'application/json')<br>);</code>
+                        <br>
+                    </p>
+                    <p class="align-center">
+                        <img src="data:image/png;base64,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" alt=""/>
+                    </p>
+                    <div class="generated-code">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #999999; font-weight: bold">&lt;?php</span>
+
+<span style="color: #999988; font-style: italic">/* App configuration ================================================================= */</span>
+
+<span style="color: #999988; font-style: italic">//the OBP url, where oAuth actions will refer to</span>
+<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_url&#39;</span>] <span style="font-weight: bold">=</span> <span style="color: #bb8844">&#39;http://127.0.0.1:8080&#39;</span>;
+
+<span style="color: #999988; font-style: italic">//the OBP API url, where all api calls will refer to</span>
+<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_api_url&#39;</span>] <span style="font-weight: bold">=</span> <span style="color: #bb8844">&#39;http://127.0.0.1:8080/obp/v2.1.0&#39;</span>;
+
+<span style="color: #999988; font-style: italic">//Consumer key, You can get one after registering your developer account at OBP url</span>
+<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;consumer_key&#39;</span>] <span style="font-weight: bold">=</span> <span style="color: #bb8844">&#39;yol0fioceneshm12s2cmcaq31u0hftjuzluhnb1m&#39;</span>;
+
+<span style="color: #999988; font-style: italic">//Consumer secret, as above</span>
+<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;consumer_secret&#39;</span>] <span style="font-weight: bold">=</span> <span style="color: #bb8844">&#39;2loxdm50jmlmfaw1k3cdnjsmylxs21z2gdpft1sj&#39;</span>;
+
+<span style="color: #999988; font-style: italic">//Url which will be passed to OBP, on this URL OBP will redirect user after successfull</span>
+<span style="color: #999988; font-style: italic">//login on OBP bank login page</span>
+<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;bank_callback_url&#39;</span>] <span style="font-weight: bold">=</span> <span style="color: #bb8844">&#39;http://localhost/app/authorize.php&#39;</span>;
+
+<span style="color: #999988; font-style: italic">/* App authorization ================================================================= */</span>
+
+<span style="color: #999988; font-style: italic">//create oAuth object</span>
+<span style="color: #008080">$oAuth</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> OAuth(<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;consumer_key&#39;</span>], <span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;consumer_secret&#39;</span>]);
+<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">enableDebug</span>();
+
+<span style="color: #999988; font-style: italic">//if You already have access token You can skip authorization process (already authorized)</span>
+<span style="font-weight: bold">if</span>(<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">isAccessTokens</span>()) {
+	<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">setToken</span>(<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessToken</span>, <span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessTokenSecret</span>);
+}
+
+<span style="color: #999988; font-style: italic">//if not, lets go to the app authorization flow</span>
+<span style="font-weight: bold">else</span> {
+	<span style="color: #999988; font-style: italic">//(1) get request token</span>
+	<span style="font-weight: bold">try</span> {
+		<span style="color: #008080">$requestTokenInfo</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getRequestToken</span>(<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_url&#39;</span>]<span style="font-weight: bold">.</span><span style="color: #bb8844">&#39;/oauth/initiate&#39;</span>, <span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;bank_callback_url&#39;</span>], OAUTH_HTTP_METHOD_POST); <span style="color: #999988; font-style: italic">//(2)</span>
+		<span style="font-weight: bold">if</span>(<span style="color: #008080">$requestTokenInfo</span>[<span style="color: #bb8844">&#39;oauth_callback_confirmed&#39;</span>] <span style="font-weight: bold">==</span> <span style="color: #bb8844">&#39;true&#39;</span>) {
+			<span style="color: #999988; font-style: italic">//save request token in local storage, we will need this later to get access token after successfull user login</span>
+			<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">requestToken</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$requestTokenInfo</span>[<span style="color: #bb8844">&#39;oauth_token&#39;</span>];
+			<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">requestTokenSecret</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$requestTokenInfo</span>[<span style="color: #bb8844">&#39;oauth_token_secret&#39;</span>];
+		}
+	} <span style="font-weight: bold">catch</span>(OAuthException <span style="color: #008080">$ex</span>) {
+		<span style="color: #008080">$log</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">error</span>(<span style="color: #bb8844">&#39;Error occured: &#39;</span><span style="font-weight: bold">.</span><span style="color: #008080">$ex</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getMessage</span>());
+	}
+
+        <span style="color: #999988; font-style: italic">//(3) redirect to bank login page with request token (in this case, we authorize in <strong>ING bank</strong>)</span>
+	header(<span style="color: #bb8844">&#39;Location: &#39;</span><span style="font-weight: bold">.</span><span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_url&#39;</span>]<span style="font-weight: bold">.</span><span style="color: #bb8844">&#39;/oauth_ing?oauth_token=&#39;</span><span style="font-weight: bold">.</span><span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">requestToken</span>);
+	<span style="font-weight: bold">exit</span>();
+
+	<span style="color: #999988; font-style: italic">/*</span>
+<span style="color: #999988; font-style: italic">	* !!!</span>
+<span style="color: #999988; font-style: italic">	*</span>
+<span style="color: #999988; font-style: italic">	* Here we have a request token, and we redirected user to bank login page.</span>
+<span style="color: #999988; font-style: italic">	* Now we must wait for the successfull login - after that, OBP bank login page</span>
+<span style="color: #999988; font-style: italic">	* will redirect user to the $config[&#39;bank_callback_url&#39;], where we can proceed.</span>
+<span style="color: #999988; font-style: italic">	*</span>
+<span style="color: #999988; font-style: italic">	* For simplicity, lets pretend that we have our successfull redirect and we can proceed:</span>
+<span style="color: #999988; font-style: italic">	*/</span>
+
+	<span style="color: #999988; font-style: italic">//(4)</span>
+
+	<span style="color: #999988; font-style: italic">//set on the oAuth object our previously fetched request tokens</span>
+	<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">setToken</span>(<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">requestToken</span>, <span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">requestTokenSecret</span>);
+
+	<span style="color: #999988; font-style: italic">//(5) get access tokens (plese note, that when OBP is redirecting user back to our page, it is setting oauth_verifier in GET)</span>
+	<span style="font-weight: bold">try</span> {
+		<span style="color: #008080">$accessTokenInfo</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getAccessToken</span>(<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_url&#39;</span>]<span style="font-weight: bold">.</span><span style="color: #bb8844">&#39;/oauth/token&#39;</span>, <span style="font-weight: bold">null</span>, <span style="color: #008080">$_GET</span>[<span style="color: #bb8844">&#39;oauth_verifier&#39;</span>], OAUTH_HTTP_METHOD_POST); <span style="color: #999988; font-style: italic">//(6)</span>
+		<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessToken</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$accessTokenInfo</span>[<span style="color: #bb8844">&#39;oauth_token&#39;</span>];
+		<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessTokenSecret</span> <span style="font-weight: bold">=</span> <span style="color: #008080">$accessTokenInfo</span>[<span style="color: #bb8844">&#39;oauth_token_secret&#39;</span>];
+	} <span style="font-weight: bold">catch</span>(OAuthException <span style="color: #008080">$ex</span>) {
+		<span style="color: #008080">$log</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">error</span>(<span style="color: #bb8844">&#39;Error occured: &#39;</span><span style="font-weight: bold">.</span><span style="color: #008080">$ex</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getMessage</span>());
+	}
+
+	<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">setToken</span>(<span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessToken</span>, <span style="color: #008080">$localStorage</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">accessTokenSecret</span>);
+}
+
+<span style="color: #999988; font-style: italic">//now we have our app authorized, access tokens are saved to local storage</span>
+
+<span style="color: #999988; font-style: italic">//(7) lets fetch some data from the API:</span>
+<span style="font-weight: bold">try</span> {
+	<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">fetch</span>(<span style="color: #008080">$config</span>[<span style="color: #bb8844">&#39;obp_api_url&#39;</span>]<span style="font-weight: bold">.</span><span style="color: #bb8844">&#39;/users/current&#39;</span>); <span style="color: #999988; font-style: italic">//(8)</span>
+} <span style="font-weight: bold">catch</span>(OAuthException <span style="color: #008080">$ex</span>) {
+	<span style="color: #008080">$log</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">error</span>(<span style="color: #bb8844">&#39;Error occured: &#39;</span><span style="font-weight: bold">.</span><span style="color: #008080">$ex</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getMessage</span>());
+}
+<span style="color: #008080">$user</span> <span style="font-weight: bold">=</span> <span style="color: #999999">json_decode</span>(<span style="color: #008080">$oAuth</span><span style="font-weight: bold">-&gt;</span><span style="color: #008080">getLastResponse</span>());
+<span style="color: #999988; font-style: italic">/*</span>
+<span style="color: #999988; font-style: italic">{</span>
+<span style="color: #999988; font-style: italic">   &quot;user_id&quot;: &quot;c3e364be-a4ad-483e-9903-10be53e3f0bc&quot;,</span>
+<span style="color: #999988; font-style: italic">   &quot;email&quot;: &quot;robert.yuk.y@example.com&quot;,</span>
+<span style="color: #999988; font-style: italic">   &quot;provider_id&quot;: &quot;robert.yuk.y@example.com&quot;,</span>
+<span style="color: #999988; font-style: italic">   &quot;provider&quot;: &quot;http://127.0.0.1:8080&quot;,</span>
+<span style="color: #999988; font-style: italic">   &quot;username&quot;: &quot;robert.yuk.y@example.com&quot;</span>
+<span style="color: #999988; font-style: italic">}</span>
+<span style="color: #999988; font-style: italic">*/</span>
+</pre></div>
+
+                    </div>
+                </div>
+                <!-- /php -->
+                <!-- java -->
+                <a id="java" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>Code examples: <strong>Java</strong></h3>
+                    <p>Following example uses  <strong>scribejava oauth lib</strong>: <a href="https://github.com/scribejava/scribejava">com.github.scribejava</a></p>
+                    <div class="generated-code">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #999999; font-weight: bold"></span>
+<pre style="margin: 0; line-height: 125%">
+<span style="color: #999988; font-style: italic">//Extend API10 class</span>
+<span style="font-weight: bold">public</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">OBPApi</span> <span style="font-weight: bold">extends</span> DefaultApi10a <span style="font-weight: bold">{</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">final</span> String API_ENDPOINT <span style="font-weight: bold">=</span> <span style="color: #bb8844">"http://127.0.0.1:8080"</span><span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">final</span> String REQUEST_TOKEN_RESOURCE <span style="font-weight: bold">=</span> <span style="color: #bb8844">"/oauth/initiate"</span><span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">final</span> String AUTHORIZE_URL <span style="font-weight: bold">=</span> <span style="color: #bb8844">"/oauth_ing?oauth_token=%s"</span><span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">final</span> String ACCESS_TOKEN_RESOURCE <span style="font-weight: bold">=</span> <span style="color: #bb8844">"/oauth/token"</span><span style="font-weight: bold">;</span>
+
+    @Override
+    <span style="font-weight: bold">public</span> String <span style="color: #990000; font-weight: bold">getAccessTokenEndpoint</span><span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">return</span> API_ENDPOINT <span style="font-weight: bold">+</span> ACCESS_TOKEN_RESOURCE<span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">}</span>
+
+    @Override
+    <span style="font-weight: bold">public</span> String <span style="color: #990000; font-weight: bold">getRequestTokenEndpoint</span><span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">return</span> API_ENDPOINT <span style="font-weight: bold">+</span> REQUEST_TOKEN_RESOURCE<span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">}</span>
+
+    @Override
+    <span style="font-weight: bold">public</span> String <span style="color: #990000; font-weight: bold">getAuthorizationUrl</span><span style="font-weight: bold">(</span>OAuth1RequestToken requestToken<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">return</span> String<span style="font-weight: bold">.</span><span style="color: #008080">format</span><span style="font-weight: bold">(</span>API_ENDPOINT <span style="font-weight: bold">+</span> AUTHORIZE_URL<span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">.</span><span style="color: #008080">getToken</span><span style="font-weight: bold">());</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">InstanceHolder</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">private</span> <span style="font-weight: bold">static</span> <span style="font-weight: bold">final</span> OBPApi INSTANCE <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> OBPApi<span style="font-weight: bold">();</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="font-weight: bold">public</span> <span style="font-weight: bold">static</span> OBPApi <span style="color: #990000; font-weight: bold">instance</span><span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">return</span> InstanceHolder<span style="font-weight: bold">.</span><span style="color: #008080">INSTANCE</span><span style="font-weight: bold">;</span>
+    <span style="font-weight: bold">}</span>
+<span style="font-weight: bold">}</span>
+
+
+<span style="color: #999988; font-style: italic">//Create oauth service</span>
+<span style="font-weight: bold">final</span> OAuth10aService service <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> ServiceBuilder<span style="font-weight: bold">()</span>
+                <span style="font-weight: bold">.</span><span style="color: #008080">apiKey</span><span style="font-weight: bold">(</span><span style="color: #bb8844">"YOUR_API_KEY"</span><span style="font-weight: bold">)</span>
+                <span style="font-weight: bold">.</span><span style="color: #008080">apiSecret</span><span style="font-weight: bold">(</span><span style="color: #bb8844">"YOUR_API_SECRET"</span><span style="font-weight: bold">)</span>
+                <span style="font-weight: bold">.</span><span style="color: #008080">callback</span><span style="font-weight: bold">(</span><span style="color: #bb8844">"CALLBACK_URL"</span><span style="font-weight: bold">)</span>
+                <span style="font-weight: bold">.</span><span style="color: #008080">build</span><span style="font-weight: bold">(</span>OBPApi<span style="font-weight: bold">.</span><span style="color: #008080">instance</span><span style="font-weight: bold">());</span>
+
+
+<span style="color: #999988; font-style: italic">//Obtain the Request Token</span>
+<span style="font-weight: bold">final</span> OAuth1RequestToken requestToken <span style="font-weight: bold">=</span> service<span style="font-weight: bold">.</span><span style="color: #008080">getRequestToken</span><span style="font-weight: bold">();</span>
+
+<span style="color: #999988; font-style: italic">//Go and authorize APP here:</span>
+String authorizationUrl <span style="font-weight: bold">=</span> service<span style="font-weight: bold">.</span><span style="color: #008080">getAuthorizationUrl</span><span style="font-weight: bold">(</span>requestToken<span style="font-weight: bold">);</span>
+
+<span style="color: #999988; font-style: italic">//Trade the Request Token and Verfier for the Access Token</span>
+<span style="font-weight: bold">final</span> OAuth1AccessToken accessToken <span style="font-weight: bold">=</span> service<span style="font-weight: bold">.</span><span style="color: #008080">getAccessToken</span><span style="font-weight: bold">(</span>requestToken<span style="font-weight: bold">,</span> oauthVerifier<span style="font-weight: bold">);</span>
+
+<span style="color: #999988; font-style: italic">//Now to access a protected resource...</span>
+<span style="font-weight: bold">final</span> OAuthRequest request <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> OAuthRequest<span style="font-weight: bold">(</span>Verb<span style="font-weight: bold">.</span><span style="color: #008080">GET</span><span style="font-weight: bold">,</span> "http://127.0.0.1:8080/obp/v2.1.0/users/current"<span style="font-weight: bold">,</span> service<span style="font-weight: bold">);</span>
+service<span style="font-weight: bold">.</span><span style="color: #008080">signRequest</span><span style="font-weight: bold">(</span>accessToken<span style="font-weight: bold">,</span> request<span style="font-weight: bold">);</span>
+</pre>
+
+
+</pre></div>
+
+                    </div>
+                </div>
+                <!-- /java -->
+                <!-- android -->
+                <a id="android" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>Code examples: <strong>Android</strong></h3>
+                    <p>Following example uses scribejava oauth lib com.github.scribejava. Main concern of authorization flow is handling redirecting from Service Provider login page.</p>
+                    <div class="generated-code">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #999988; font-style: italic">////////////////////////////</span>
+<span style="color: #999988; font-style: italic">// AuthorizeActivity.java //</span>
+<span style="color: #999988; font-style: italic">////////////////////////////</span>
+
+public <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">AuthorizeActivity</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">AppCompatActivity</span> <span style="font-weight: bold">{</span>
+
+    @Override
+    <span style="font-weight: bold">protected</span> void onCreate<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Bundle</span> savedInstanceState<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">super.</span>onCreate<span style="font-weight: bold">(</span>savedInstanceState<span style="font-weight: bold">);</span>
+        setContentView<span style="font-weight: bold">(</span>R<span style="font-weight: bold">.</span>layout<span style="font-weight: bold">.</span>activity_main<span style="font-weight: bold">);</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Authorization process</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">protected</span> void onLogin<span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        <span style="color: #999988; font-style: italic">// Specify callback url, in case of mobile app use &quot;data android:scheme&quot; property,</span>
+        <span style="color: #999988; font-style: italic">// to get back to application from login page</span>
+        <span style="color: #445588; font-weight: bold">String</span> callbackUrl <span style="font-weight: bold">=</span> <span style="color: #bb8844">&quot;plhackathonobp&quot;</span> <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;://oauth&quot;</span><span style="font-weight: bold">;</span>
+
+        <span style="color: #999988; font-style: italic">// Check if any service already exist, otherwise create new one</span>
+        <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">if</span> <span style="font-weight: bold">(!</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>containsKey<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">SERVICE</span><span style="font-weight: bold">))</span> <span style="font-weight: bold">{</span>
+            service <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">ServiceBuilder</span><span style="font-weight: bold">()</span>
+                    <span style="font-weight: bold">.</span>apiKey<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPApi</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">OBP_AUTH_KEY</span><span style="font-weight: bold">)</span>
+                    <span style="font-weight: bold">.</span>apiSecret<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPApi</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">OBP_SECRET_KEY</span><span style="font-weight: bold">)</span>
+                    <span style="font-weight: bold">.</span>callback<span style="font-weight: bold">(</span>callbackUrl<span style="font-weight: bold">)</span>
+                    <span style="font-weight: bold">.</span>build<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPApi</span><span style="font-weight: bold">.</span>instance<span style="font-weight: bold">());</span>
+            <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>put<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">SERVICE</span><span style="font-weight: bold">,</span> service<span style="font-weight: bold">);</span>
+
+        <span style="font-weight: bold">}</span> <span style="font-weight: bold">else</span> <span style="font-weight: bold">{</span>
+            service <span style="font-weight: bold">=</span> <span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth10aService</span><span style="font-weight: bold">)</span> <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">SERVICE</span><span style="font-weight: bold">);</span>
+        <span style="font-weight: bold">}</span>
+        <span style="color: #999988; font-style: italic">// Fire async task to obtain request token, save it into the storage and fire authorization task</span>
+        requestTokenTask<span style="font-weight: bold">(</span>service<span style="font-weight: bold">);</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Resume activity after returning from browser</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    @Override
+    public void onResume<span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">super.</span>onResume<span style="font-weight: bold">();</span>
+        <span style="color: #445588; font-weight: bold">Intent</span> intent <span style="font-weight: bold">=</span> getIntent<span style="font-weight: bold">();</span>
+        handleCallback<span style="font-weight: bold">(</span>intent<span style="font-weight: bold">);</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Handle callback after returning from browser with successfully authenticated data</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> void handleCallback<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Intent</span> intent<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="color: #445588; font-weight: bold">Uri</span> uri <span style="font-weight: bold">=</span> intent<span style="font-weight: bold">.</span>getData<span style="font-weight: bold">();</span>
+        <span style="font-weight: bold">if</span> <span style="font-weight: bold">(</span>uri <span style="font-weight: bold">!=</span> <span style="font-weight: bold">null)</span> <span style="font-weight: bold">{</span>
+            <span style="color: #999988; font-style: italic">// Extract verifier code from successful url returned from browser</span>
+            <span style="color: #445588; font-weight: bold">String</span> oauthVerifier <span style="font-weight: bold">=</span> uri<span style="font-weight: bold">.</span>getQueryParameter<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;oauth_verifier&quot;</span><span style="font-weight: bold">);</span>
+            <span style="color: #999988; font-style: italic">// Get existing instances of service and requestToken, from storage singleton (in case activity was been recreated)</span>
+            <span style="color: #445588; font-weight: bold">OAuth10aService</span> service <span style="font-weight: bold">=</span> <span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth10aService</span><span style="font-weight: bold">)</span> <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">SERVICE</span><span style="font-weight: bold">);</span>
+            <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken <span style="font-weight: bold">=</span> <span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth1RequestToken</span><span style="font-weight: bold">)</span> <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">REQUEST_TOKEN</span><span style="font-weight: bold">);</span>
+            <span style="color: #999988; font-style: italic">// Fire async task to obtain access token, save it into the storage and move to proper Activity</span>
+            accessTokenTask<span style="font-weight: bold">(this,</span> service<span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">,</span> oauthVerifier<span style="font-weight: bold">);</span>
+        <span style="font-weight: bold">}</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Create authorization async task</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> void authorizeTask<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">AuthorizeTask</span><span style="font-weight: bold">(this,</span> service<span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">).</span>execute<span style="font-weight: bold">();</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Create request token async task</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> void requestTokenTask<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">RequestTokenTask</span><span style="font-weight: bold">(</span>service<span style="font-weight: bold">).</span>execute<span style="font-weight: bold">();</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Create access token async task</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> void accessTokenTask<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Activity</span> currentActivity<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">String</span> oauthVerifier<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">AccessTokenTask</span><span style="font-weight: bold">(</span>currentActivity<span style="font-weight: bold">,</span> service<span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">,</span> oauthVerifier<span style="font-weight: bold">).</span>execute<span style="font-weight: bold">();</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Async Task to obtain request token and fire authorization task</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">RequestTokenTask</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">AsyncTask</span><span style="font-weight: bold">&lt;</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span><span style="font-weight: bold">&gt;</span> <span style="font-weight: bold">{</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">;</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">RequestTokenTask</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">this.</span>service <span style="font-weight: bold">=</span> service<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> doInBackground<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">...</span> arg0<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">try</span> <span style="font-weight: bold">{</span>
+                <span style="color: #999988; font-style: italic">// Get request token</span>
+                <span style="font-weight: bold">return</span> service<span style="font-weight: bold">.</span>getRequestToken<span style="font-weight: bold">();</span>
+            <span style="font-weight: bold">}</span> <span style="font-weight: bold">catch</span> <span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">IOException</span> e<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+                e<span style="font-weight: bold">.</span>printStackTrace<span style="font-weight: bold">();</span>
+                <span style="font-weight: bold">return</span> <span style="font-weight: bold">null;</span>
+            <span style="font-weight: bold">}</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> void onPostExecute<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">if</span> <span style="font-weight: bold">(</span>requestToken <span style="font-weight: bold">!=</span> <span style="font-weight: bold">null)</span> <span style="font-weight: bold">{</span>
+                <span style="color: #999988; font-style: italic">// Save request token into storage singleton</span>
+                <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>put<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">REQUEST_TOKEN</span><span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">);</span>
+                <span style="color: #999988; font-style: italic">// Fire authorization async task</span>
+                authorizeTask<span style="font-weight: bold">(</span>service<span style="font-weight: bold">,</span> requestToken<span style="font-weight: bold">);</span>
+            <span style="font-weight: bold">}</span>
+        <span style="font-weight: bold">}</span>
+
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Async Task to authorize user</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">AuthorizeTask</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">AsyncTask</span><span style="font-weight: bold">&lt;</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">Uri</span><span style="font-weight: bold">&gt;</span> <span style="font-weight: bold">{</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">Activity</span> currentActivity<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">;</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">AuthorizeTask</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Activity</span> currentActivity<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">this.</span>currentActivity <span style="font-weight: bold">=</span> currentActivity<span style="font-weight: bold">;</span>
+            <span style="font-weight: bold">this.</span>service <span style="font-weight: bold">=</span> service<span style="font-weight: bold">;</span>
+            <span style="font-weight: bold">this.</span>requestToken <span style="font-weight: bold">=</span> requestToken<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> <span style="color: #445588; font-weight: bold">Uri</span> doInBackground<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">...</span> arg0<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="color: #999988; font-style: italic">// Get authorization url on which user should perform his login</span>
+            <span style="font-weight: bold">return</span> <span style="color: #445588; font-weight: bold">Uri</span><span style="font-weight: bold">.</span>parse<span style="font-weight: bold">(</span>service<span style="font-weight: bold">.</span>getAuthorizationUrl<span style="font-weight: bold">(</span>requestToken<span style="font-weight: bold">));</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> void onPostExecute<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Uri</span> authUri<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="color: #999988; font-style: italic">// Start a browser and redirect User to obtained authorization url</span>
+            <span style="color: #445588; font-weight: bold">Intent</span> browser <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">Intent</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Intent</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">ACTION_VIEW</span><span style="font-weight: bold">);</span>
+            browser<span style="font-weight: bold">.</span>setData<span style="font-weight: bold">(</span>authUri<span style="font-weight: bold">);</span>
+            currentActivity<span style="font-weight: bold">.</span>startActivity<span style="font-weight: bold">(</span>browser<span style="font-weight: bold">);</span>
+        <span style="font-weight: bold">}</span>
+    <span style="font-weight: bold">}</span>
+
+    <span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">     * Async Task to obtain access token and move to proper Activity</span>
+<span style="color: #999988; font-style: italic">     */</span>
+    <span style="font-weight: bold">private</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">AccessTokenTask</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">AsyncTask</span><span style="font-weight: bold">&lt;</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1AccessToken</span><span style="font-weight: bold">&gt;</span> <span style="font-weight: bold">{</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">Activity</span> currentActivity<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">String</span> oauthVerifier<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">;</span>
+
+        <span style="font-weight: bold">private</span> <span style="color: #445588; font-weight: bold">AccessTokenTask</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Activity</span> currentActivity<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth10aService</span> service<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">OAuth1RequestToken</span> requestToken<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">String</span> oauthVerifier<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">this.</span>currentActivity <span style="font-weight: bold">=</span> currentActivity<span style="font-weight: bold">;</span>
+            <span style="font-weight: bold">this.</span>service <span style="font-weight: bold">=</span> service<span style="font-weight: bold">;</span>
+            <span style="font-weight: bold">this.</span>requestToken <span style="font-weight: bold">=</span> requestToken<span style="font-weight: bold">;</span>
+            <span style="font-weight: bold">this.</span>oauthVerifier <span style="font-weight: bold">=</span> oauthVerifier<span style="font-weight: bold">;</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> <span style="color: #445588; font-weight: bold">OAuth1AccessToken</span> doInBackground<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Void</span><span style="font-weight: bold">...</span> arg0<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">try</span> <span style="font-weight: bold">{</span>
+                <span style="color: #999988; font-style: italic">// Get access token</span>
+                <span style="font-weight: bold">return</span> service<span style="font-weight: bold">.</span>getAccessToken<span style="font-weight: bold">(</span>requestToken<span style="font-weight: bold">,</span> oauthVerifier<span style="font-weight: bold">);</span>
+            <span style="font-weight: bold">}</span> <span style="font-weight: bold">catch</span> <span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">IOException</span> e<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+                e<span style="font-weight: bold">.</span>printStackTrace<span style="font-weight: bold">();</span>
+                <span style="font-weight: bold">return</span> <span style="font-weight: bold">null;</span>
+            <span style="font-weight: bold">}</span>
+        <span style="font-weight: bold">}</span>
+
+        @Override
+        <span style="font-weight: bold">protected</span> void onPostExecute<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OAuth1AccessToken</span> accessToken<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+            <span style="font-weight: bold">if</span> <span style="font-weight: bold">(</span>accessToken <span style="font-weight: bold">!=</span> <span style="font-weight: bold">null)</span> <span style="font-weight: bold">{</span>
+                <span style="color: #999988; font-style: italic">// Save access token into storage singleton</span>
+                <span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span>getInstance<span style="font-weight: bold">().</span>storage<span style="font-weight: bold">.</span>put<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">MyStorage</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">Key</span><span style="font-weight: bold">.</span><span style="color: #445588; font-weight: bold">ACCESS_TOKEN</span><span style="font-weight: bold">,</span> accessToken<span style="font-weight: bold">);</span>
+                <span style="color: #999988; font-style: italic">// Move to proper Activity</span>
+                <span style="color: #445588; font-weight: bold">Intent</span> intent <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">Intent</span><span style="font-weight: bold">(</span>currentActivity<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">RequestActivity</span><span style="font-weight: bold">.</span>class<span style="font-weight: bold">);</span>
+                currentActivity<span style="font-weight: bold">.</span>startActivity<span style="font-weight: bold">(</span>intent<span style="font-weight: bold">);</span>
+                currentActivity<span style="font-weight: bold">.</span>finish<span style="font-weight: bold">();</span>
+            <span style="font-weight: bold">}</span>
+        <span style="font-weight: bold">}</span>
+    <span style="font-weight: bold">}</span>
+<span style="font-weight: bold">}</span>
+</pre></div>
+
+                    </div>
+                </div>
+                <!-- /android -->
+                <!-- scala -->
+                <a id="scala" class="anchor">&nbsp;</a>
+                <div class="bordered">
+                    <h3>Code examples: <strong>Scala</strong></h3>
+                    <p>Following example is part of Social Finance Scala/Liftweb application, made by OpenBankProject. It uses signpost oauth lib oauth.signpost</p>
+                    <div class="generated-code">
+                        <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #999988; font-style: italic">///////////////////////</span>
+<span style="color: #999988; font-style: italic">// OAuthClient.scala //</span>
+<span style="color: #999988; font-style: italic">///////////////////////</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * Service Provider Interface - Web Service sharing some protected resources, which can be obtained by OAuth</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">sealed</span> <span style="font-weight: bold">trait</span> <span style="color: #445588; font-weight: bold">Provider</span> <span style="font-weight: bold">{</span>
+  <span style="font-weight: bold">val</span> name <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+
+  <span style="color: #999988; font-style: italic">// Service provider url address</span>
+  <span style="font-weight: bold">val</span> apiBaseUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+  <span style="color: #999988; font-style: italic">// Service provider url address to obtain request token, used to authorize as Service Provider User and get access token</span>
+  <span style="font-weight: bold">val</span> requestTokenUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+  <span style="color: #999988; font-style: italic">// Service provider url address to exchange Request token for an Access token, used to access protected resources from Service Provider</span>
+  <span style="font-weight: bold">val</span> accessTokenUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+  <span style="color: #999988; font-style: italic">// Service provider url address to authorize as Service Provider User</span>
+  <span style="font-weight: bold">val</span> authorizeUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+  <span style="color: #999988; font-style: italic">// Service provider url address to sign up to the Service Provider account</span>
+  <span style="font-weight: bold">val</span> signupUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Option</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">]</span>
+  <span style="color: #999988; font-style: italic">// OAuth1.0(a) Service Provider</span>
+  <span style="font-weight: bold">val</span> oAuthProvider <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">OAuthProvider</span>
+  <span style="color: #999988; font-style: italic">// A value used by the client app (consumer) to identify itself to the Service Provider,</span>
+  <span style="color: #999988; font-style: italic">// obtained after app registration in Service Provider.</span>
+  <span style="font-weight: bold">val</span> consumerKey <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+  <span style="color: #999988; font-style: italic">// A secret used by the client app (consumer) to establish ownership of the Consumer Key,</span>
+  <span style="color: #999988; font-style: italic">// obtained after app registration in Service Provider.</span>
+  <span style="font-weight: bold">val</span> consumerSecret <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span>
+<span style="font-weight: bold">}</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * Service Provider prepared for OBP-API</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">object</span> <span style="color: #445588; font-weight: bold">OBPProvider</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">Provider</span> <span style="font-weight: bold">{</span>
+  <span style="font-weight: bold">val</span> name <span style="font-weight: bold">=</span> <span style="color: #bb8844">&quot;The Open Bank Project Demo&quot;</span>
+
+  <span style="font-weight: bold">val</span> baseUrl <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Props</span><span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;api_hostname&quot;</span><span style="font-weight: bold">,</span> S<span style="font-weight: bold">.</span>hostName<span style="font-weight: bold">)</span>
+  <span style="font-weight: bold">val</span> apiBaseUrl <span style="font-weight: bold">=</span> baseUrl <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/obp&quot;</span>
+  <span style="font-weight: bold">val</span> requestTokenUrl <span style="font-weight: bold">=</span> baseUrl <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/oauth/initiate&quot;</span>
+  <span style="font-weight: bold">val</span> accessTokenUrl <span style="font-weight: bold">=</span> baseUrl <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/oauth/token&quot;</span>
+  <span style="font-weight: bold">val</span> authorizeUrl <span style="font-weight: bold">=</span> baseUrl <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/oauth_ing&quot;</span>
+  <span style="font-weight: bold">val</span> signupUrl <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Some</span><span style="font-weight: bold">(</span>baseUrl <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/user_mgt/sign_up&quot;</span><span style="font-weight: bold">)</span>
+
+  <span style="font-weight: bold">lazy</span> <span style="font-weight: bold">val</span> oAuthProvider <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">OAuthProvider</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">DefaultOAuthProvider</span><span style="font-weight: bold">(</span>requestTokenUrl<span style="font-weight: bold">,</span> accessTokenUrl<span style="font-weight: bold">,</span> authorizeUrl<span style="font-weight: bold">)</span>
+
+  <span style="font-weight: bold">val</span> consumerKey <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Props</span><span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;obp_consumer_key&quot;</span><span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;&quot;</span><span style="font-weight: bold">)</span>
+  <span style="font-weight: bold">val</span> consumerSecret <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Props</span><span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;obp_secret_key&quot;</span><span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;&quot;</span><span style="font-weight: bold">)</span>
+<span style="font-weight: bold">}</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  *</span>
+<span style="color: #999988; font-style: italic">  * A website or application that uses OAuth to access the Service Provider on behalf of the User.</span>
+<span style="color: #999988; font-style: italic">  * @param consumerKey</span>
+<span style="color: #999988; font-style: italic">  * @param consumerSecret</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">case</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">Consumer</span><span style="font-weight: bold">(</span>consumerKey <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">,</span> consumerSecret <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+  <span style="font-weight: bold">val</span> oAuthConsumer <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">OAuthConsumer</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">DefaultOAuthConsumer</span><span style="font-weight: bold">(</span>consumerKey<span style="font-weight: bold">,</span> consumerSecret<span style="font-weight: bold">)</span>
+<span style="font-weight: bold">}</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * Object for OAuth credential and its state</span>
+<span style="color: #999988; font-style: italic">  * @param provider Service Provider object</span>
+<span style="color: #999988; font-style: italic">  * @param consumer Consumer object</span>
+<span style="color: #999988; font-style: italic">  * @param readyToSign flag indicating properly authorized credentials</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">case</span> <span style="font-weight: bold">class</span> <span style="color: #445588; font-weight: bold">Credential</span><span style="font-weight: bold">(</span>provider <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Provider</span><span style="font-weight: bold">,</span> consumer <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">OAuthConsumer</span><span style="font-weight: bold">,</span> readyToSign <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Boolean</span><span style="font-weight: bold">)</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * Container for credential data with a session lifetime</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">object</span> <span style="color: #445588; font-weight: bold">credentials</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">SessionVar</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">Option</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">Credential</span><span style="font-weight: bold">]](</span><span style="color: #445588; font-weight: bold">None</span><span style="font-weight: bold">)</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * Container for recent provider data with a session lifetime</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">object</span> <span style="color: #445588; font-weight: bold">mostRecentLoginAttemptProvider</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">SessionVar</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">Box</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">Provider</span><span style="font-weight: bold">]](</span><span style="color: #445588; font-weight: bold">Empty</span><span style="font-weight: bold">)</span>
+
+<span style="color: #999988; font-style: italic">/**</span>
+<span style="color: #999988; font-style: italic">  * OAuth client object handling authorization flow</span>
+<span style="color: #999988; font-style: italic">  */</span>
+<span style="font-weight: bold">object</span> <span style="color: #445588; font-weight: bold">OAuthClient</span> <span style="font-weight: bold">extends</span> <span style="color: #445588; font-weight: bold">Loggable</span> <span style="font-weight: bold">{</span>
+
+  <span style="color: #999988; font-style: italic">// Get already authorized credentials</span>
+  <span style="font-weight: bold">def</span> getAuthorizedCredential<span style="font-weight: bold">()</span> <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Option</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">Credential</span><span style="font-weight: bold">]</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+    credentials<span style="font-weight: bold">.</span>filter<span style="font-weight: bold">(_.</span>readyToSign<span style="font-weight: bold">)</span>
+  <span style="font-weight: bold">}</span>
+
+  <span style="color: #999988; font-style: italic">// Get Service Provider bas url addresss</span>
+  <span style="font-weight: bold">def</span> currentApiBaseUrl <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+    getAuthorizedCredential<span style="font-weight: bold">().</span>map<span style="font-weight: bold">(_.</span>provider<span style="font-weight: bold">.</span>apiBaseUrl<span style="font-weight: bold">).</span>getOrElse<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPProvider</span><span style="font-weight: bold">.</span>apiBaseUrl<span style="font-weight: bold">)</span>
+  <span style="font-weight: bold">}</span>
+
+  <span style="color: #999988; font-style: italic">// Set new credentials based on given provider</span>
+  <span style="font-weight: bold">def</span> setNewCredential<span style="font-weight: bold">(</span>provider <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Provider</span><span style="font-weight: bold">)</span> <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">Credential</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+    <span style="font-weight: bold">val</span> consumer <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">DefaultOAuthConsumer</span><span style="font-weight: bold">(</span>provider<span style="font-weight: bold">.</span>consumerKey<span style="font-weight: bold">,</span> provider<span style="font-weight: bold">.</span>consumerSecret<span style="font-weight: bold">)</span>
+    <span style="font-weight: bold">val</span> credential <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Credential</span><span style="font-weight: bold">(</span>provider<span style="font-weight: bold">,</span> consumer<span style="font-weight: bold">,</span> <span style="font-weight: bold">false)</span>
+
+    credentials<span style="font-weight: bold">.</span>set<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Some</span><span style="font-weight: bold">(</span>credential<span style="font-weight: bold">))</span>
+    credential
+  <span style="font-weight: bold">}</span>
+
+  <span style="color: #999988; font-style: italic">// Handle callback response form Service Provider</span>
+  <span style="font-weight: bold">def</span> handleCallback<span style="font-weight: bold">():</span> <span style="color: #445588; font-weight: bold">Box</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">LiftResponse</span><span style="font-weight: bold">]</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+
+    <span style="font-weight: bold">val</span> success <span style="font-weight: bold">=</span> <span style="font-weight: bold">for</span> <span style="font-weight: bold">{</span>
+      verifier <span style="font-weight: bold">&lt;-</span> S<span style="font-weight: bold">.</span>param<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;oauth_verifier&quot;</span><span style="font-weight: bold">)</span> <span style="font-weight: bold">?~</span> <span style="color: #bb8844">&quot;No oauth verifier found&quot;</span>
+      provider <span style="font-weight: bold">&lt;-</span> mostRecentLoginAttemptProvider<span style="font-weight: bold">.</span>get <span style="font-weight: bold">?~</span> <span style="color: #bb8844">&quot;No provider found for callback&quot;</span>
+      consumer <span style="font-weight: bold">&lt;-</span> <span style="color: #445588; font-weight: bold">Box</span><span style="font-weight: bold">(</span>credentials<span style="font-weight: bold">.</span>map<span style="font-weight: bold">(_.</span>consumer<span style="font-weight: bold">))</span> <span style="font-weight: bold">?~</span> <span style="color: #bb8844">&quot;No consumer found for callback&quot;</span>
+    <span style="font-weight: bold">}</span> <span style="font-weight: bold">yield</span> <span style="font-weight: bold">{</span>
+      <span style="color: #999988; font-style: italic">//after this, consumer is ready to sign requests</span>
+      provider<span style="font-weight: bold">.</span>oAuthProvider<span style="font-weight: bold">.</span>retrieveAccessToken<span style="font-weight: bold">(</span>consumer<span style="font-weight: bold">,</span> verifier<span style="font-weight: bold">)</span>
+      <span style="color: #999988; font-style: italic">//update the session credentials as properly authorized</span>
+      <span style="font-weight: bold">val</span> newCredential <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Credential</span><span style="font-weight: bold">(</span>provider<span style="font-weight: bold">,</span> consumer<span style="font-weight: bold">,</span> <span style="font-weight: bold">true)</span>
+      credentials<span style="font-weight: bold">.</span>set<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Some</span><span style="font-weight: bold">(</span>newCredential<span style="font-weight: bold">))</span>
+    <span style="font-weight: bold">}</span>
+
+    success <span style="font-weight: bold">match</span> <span style="font-weight: bold">{</span>
+      <span style="font-weight: bold">case</span> <span style="color: #445588; font-weight: bold">Full</span><span style="font-weight: bold">(_)</span> <span style="font-weight: bold">=&gt;</span> S<span style="font-weight: bold">.</span>redirectTo<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;/&quot;</span><span style="font-weight: bold">)</span>
+      <span style="font-weight: bold">case</span> <span style="color: #445588; font-weight: bold">Failure</span><span style="font-weight: bold">(</span>msg<span style="font-weight: bold">,</span> <span style="font-weight: bold">_,</span> <span style="font-weight: bold">_)</span> <span style="font-weight: bold">=&gt;</span> logger<span style="font-weight: bold">.</span>warn<span style="font-weight: bold">(</span>msg<span style="font-weight: bold">)</span>
+      <span style="font-weight: bold">case</span> <span style="font-weight: bold">_</span> <span style="font-weight: bold">=&gt;</span> logger<span style="font-weight: bold">.</span>warn<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;Something went wrong in an oauth callback and there was no error message set for it&quot;</span><span style="font-weight: bold">)</span>
+    <span style="font-weight: bold">}</span>
+    <span style="color: #445588; font-weight: bold">Empty</span>
+  <span style="font-weight: bold">}</span>
+
+  <span style="color: #999988; font-style: italic">// Obtain a request token and redirect to authorization url received by response</span>
+  <span style="font-weight: bold">def</span> redirectToOauthLogin<span style="font-weight: bold">()</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+    <span style="color: #999988; font-style: italic">// Set OBP Provider as most recent and new credentials to login</span>
+    mostRecentLoginAttemptProvider<span style="font-weight: bold">.</span>set<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Full</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPProvider</span><span style="font-weight: bold">))</span>
+    <span style="font-weight: bold">val</span> credential <span style="font-weight: bold">=</span> setNewCredential<span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">OBPProvider</span><span style="font-weight: bold">)</span>
+
+    <span style="color: #999988; font-style: italic">// Retrieve request token by providing consumer data and callbackUrl to which the Service Provider will</span>
+    <span style="color: #999988; font-style: italic">// redirect the User back when the the sign in will complete successfully</span>
+    <span style="font-weight: bold">val</span> authUrl <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">OBPProvider</span><span style="font-weight: bold">.</span>oAuthProvider<span style="font-weight: bold">.</span>retrieveRequestToken<span style="font-weight: bold">(</span>credential<span style="font-weight: bold">.</span>consumer<span style="font-weight: bold">,</span> <span style="color: #445588; font-weight: bold">Props</span><span style="font-weight: bold">.</span>get<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;base_url&quot;</span><span style="font-weight: bold">,</span> S<span style="font-weight: bold">.</span>hostName<span style="font-weight: bold">)</span> <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/oauthcallback&quot;</span><span style="font-weight: bold">)</span>
+    <span style="color: #999988; font-style: italic">// Redirect to authorizeUrl received after successful Request Token request</span>
+    S<span style="font-weight: bold">.</span>redirectTo<span style="font-weight: bold">(</span>authUrl<span style="font-weight: bold">)</span>
+  <span style="font-weight: bold">}</span>
+<span style="font-weight: bold">}</span>
+
+<span style="color: #999988; font-style: italic">//////////////////</span>
+<span style="color: #999988; font-style: italic">// ObpAPI.scala //</span>
+<span style="color: #999988; font-style: italic">//////////////////</span>
+
+<span style="font-weight: bold">object</span> <span style="color: #445588; font-weight: bold">ObpPost</span> <span style="font-weight: bold">{</span>
+  <span style="font-weight: bold">def</span> apply<span style="font-weight: bold">(</span>apiPath<span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">,</span> json <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">JValue</span><span style="font-weight: bold">):</span> <span style="color: #445588; font-weight: bold">Box</span><span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">JValue</span><span style="font-weight: bold">]</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+    <span style="font-weight: bold">val</span> jsonBody <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">Some</span><span style="font-weight: bold">(</span>json<span style="font-weight: bold">)</span>
+    <span style="font-weight: bold">val</span> statusAndBody <span style="font-weight: bold">=</span> tryo <span style="font-weight: bold">{</span>
+      <span style="font-weight: bold">val</span> credentials <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">OAuthClient</span><span style="font-weight: bold">.</span>getAuthorizedCredential
+      <span style="font-weight: bold">val</span> apiUrl <span style="font-weight: bold">=</span> <span style="color: #445588; font-weight: bold">OAuthClient</span><span style="font-weight: bold">.</span>currentApiBaseUrl
+      <span style="font-weight: bold">val</span> url <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">URL</span><span style="font-weight: bold">(</span>apiUrl <span style="font-weight: bold">+</span> apiPath<span style="font-weight: bold">)</span>
+      <span style="font-weight: bold">val</span> request <span style="font-weight: bold">=</span> url<span style="font-weight: bold">.</span>openConnection<span style="font-weight: bold">().</span>asInstanceOf<span style="font-weight: bold">[</span><span style="color: #445588; font-weight: bold">HttpURLConnection</span><span style="font-weight: bold">]</span>
+      request<span style="font-weight: bold">.</span>setDoOutput<span style="font-weight: bold">(true)</span>
+      request<span style="font-weight: bold">.</span>setRequestMethod<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;POST&quot;</span><span style="font-weight: bold">)</span>
+      request<span style="font-weight: bold">.</span>setRequestProperty<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;Content-Type&quot;</span><span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;application/json; charset=UTF-8&quot;</span><span style="font-weight: bold">)</span>
+      request<span style="font-weight: bold">.</span>setRequestProperty<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;Accept&quot;</span><span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;application/json&quot;</span><span style="font-weight: bold">)</span>
+      request<span style="font-weight: bold">.</span>setRequestProperty<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;Accept-Charset&quot;</span><span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;UTF-8&quot;</span><span style="font-weight: bold">)</span>
+
+      <span style="color: #999988; font-style: italic">// Sign the request if we have some credentials to sign it with</span>
+      credentials<span style="font-weight: bold">.</span>foreach<span style="font-weight: bold">(</span>c <span style="font-weight: bold">=&gt;</span> c<span style="font-weight: bold">.</span>consumer<span style="font-weight: bold">.</span>sign<span style="font-weight: bold">(</span>request<span style="font-weight: bold">))</span>
+
+      <span style="color: #999988; font-style: italic">// Set the request body</span>
+      <span style="font-weight: bold">if(</span>jsonBody<span style="font-weight: bold">.</span>isDefined<span style="font-weight: bold">)</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">val</span> output <span style="font-weight: bold">=</span> request<span style="font-weight: bold">.</span>getOutputStream<span style="font-weight: bold">()</span>
+        <span style="font-weight: bold">val</span> writer <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">BufferedWriter</span><span style="font-weight: bold">(new</span> <span style="color: #445588; font-weight: bold">OutputStreamWriter</span><span style="font-weight: bold">(</span>output<span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;UTF-8&quot;</span><span style="font-weight: bold">))</span>
+        writer<span style="font-weight: bold">.</span>write<span style="font-weight: bold">(</span>compact<span style="font-weight: bold">(</span>render<span style="font-weight: bold">(</span>jsonBody<span style="font-weight: bold">.</span>get<span style="font-weight: bold">)).</span>toString<span style="font-weight: bold">)</span>
+        writer<span style="font-weight: bold">.</span>flush<span style="font-weight: bold">()</span>
+        writer<span style="font-weight: bold">.</span>close<span style="font-weight: bold">()</span>
+      <span style="font-weight: bold">}</span>
+
+      request<span style="font-weight: bold">.</span>connect<span style="font-weight: bold">()</span>
+      <span style="font-weight: bold">val</span> status <span style="font-weight: bold">=</span> request<span style="font-weight: bold">.</span>getResponseCode<span style="font-weight: bold">()</span>
+
+      <span style="color: #999988; font-style: italic">// Get reponse body</span>
+      <span style="font-weight: bold">val</span> inputStream <span style="font-weight: bold">=</span> <span style="font-weight: bold">if(</span>status <span style="font-weight: bold">&gt;=</span> <span style="color: #009999">400</span><span style="font-weight: bold">)</span> request<span style="font-weight: bold">.</span>getErrorStream<span style="font-weight: bold">()</span> <span style="font-weight: bold">else</span> request<span style="font-weight: bold">.</span>getInputStream<span style="font-weight: bold">()</span>
+      <span style="font-weight: bold">val</span> reader <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">BufferedReader</span><span style="font-weight: bold">(new</span> <span style="color: #445588; font-weight: bold">InputStreamReader</span><span style="font-weight: bold">(</span>inputStream<span style="font-weight: bold">,</span> <span style="color: #bb8844">&quot;UTF-8&quot;</span><span style="font-weight: bold">))</span>
+      <span style="font-weight: bold">val</span> builder <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">StringBuilder</span><span style="font-weight: bold">()</span>
+      <span style="font-weight: bold">var</span> line <span style="font-weight: bold">=</span> <span style="color: #bb8844">&quot;&quot;</span>
+      <span style="font-weight: bold">def</span> readLines<span style="font-weight: bold">()</span> <span style="font-weight: bold">{</span>
+        line <span style="font-weight: bold">=</span> reader<span style="font-weight: bold">.</span>readLine<span style="font-weight: bold">()</span>
+        <span style="font-weight: bold">if</span> <span style="font-weight: bold">(</span>line <span style="font-weight: bold">!=</span> <span style="font-weight: bold">null)</span> <span style="font-weight: bold">{</span>
+          builder<span style="font-weight: bold">.</span>append<span style="font-weight: bold">(</span>line <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;\n&quot;</span><span style="font-weight: bold">)</span>
+          readLines<span style="font-weight: bold">()</span>
+        <span style="font-weight: bold">}</span>
+      <span style="font-weight: bold">}</span>
+      readLines<span style="font-weight: bold">()</span>
+      reader<span style="font-weight: bold">.</span>close<span style="font-weight: bold">();</span>
+      <span style="font-weight: bold">(</span>status<span style="font-weight: bold">,</span> builder<span style="font-weight: bold">.</span>toString<span style="font-weight: bold">())</span>
+    <span style="font-weight: bold">}</span>
+
+    statusAndBody pass <span style="font-weight: bold">{</span>
+      <span style="font-weight: bold">case</span> <span style="color: #445588; font-weight: bold">Failure</span><span style="font-weight: bold">(</span>msg<span style="font-weight: bold">,</span> ex<span style="font-weight: bold">,</span> <span style="font-weight: bold">_)</span> <span style="font-weight: bold">=&gt;</span> <span style="font-weight: bold">{</span>
+        <span style="font-weight: bold">val</span> sw <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">StringWriter</span><span style="font-weight: bold">()</span>
+        <span style="font-weight: bold">val</span> writer <span style="font-weight: bold">=</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">PrintWriter</span><span style="font-weight: bold">(</span>sw<span style="font-weight: bold">)</span>
+        ex<span style="font-weight: bold">.</span>foreach<span style="font-weight: bold">(_.</span>printStackTrace<span style="font-weight: bold">(</span>writer<span style="font-weight: bold">))</span>
+        logger<span style="font-weight: bold">.</span>debug<span style="font-weight: bold">(</span><span style="color: #bb8844">&quot;Error making api call: &quot;</span> <span style="font-weight: bold">+</span> msg <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;, stack trace: &quot;</span> <span style="font-weight: bold">+</span> sw<span style="font-weight: bold">.</span>toString<span style="font-weight: bold">)</span>
+      <span style="font-weight: bold">}</span>
+      <span style="font-weight: bold">case</span> <span style="font-weight: bold">_</span> <span style="font-weight: bold">=&gt;</span> <span style="color: #445588; font-weight: bold">Unit</span>
+    <span style="font-weight: bold">}</span>
+  <span style="font-weight: bold">}</span>
+<span style="font-weight: bold">}</span>
+
+<span style="font-weight: bold">def</span> addPermission<span style="font-weight: bold">(</span>bankId<span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">,</span> accountId<span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">,</span> userId <span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">,</span> viewId<span style="font-weight: bold">:</span> <span style="color: #445588; font-weight: bold">String</span><span style="font-weight: bold">)</span> <span style="font-weight: bold">=</span> <span style="font-weight: bold">{</span>
+	<span style="font-weight: bold">val</span> grantPermissionUrl <span style="font-weight: bold">=</span> <span style="color: #bb8844">&quot;/v1.2.1/banks/&quot;</span> <span style="font-weight: bold">+</span> urlEncode<span style="font-weight: bold">(</span>bankId<span style="font-weight: bold">)</span> <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/accounts/&quot;</span> <span style="font-weight: bold">+</span> urlEncode<span style="font-weight: bold">(</span>accountId<span style="font-weight: bold">)</span> <span style="font-weight: bold">+</span>
+		<span style="color: #bb8844">&quot;/permissions/&quot;</span> <span style="font-weight: bold">+</span> urlEncode<span style="font-weight: bold">(</span>defaultProvider<span style="font-weight: bold">)</span> <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/&quot;</span> <span style="font-weight: bold">+</span>urlEncode<span style="font-weight: bold">(</span>userId<span style="font-weight: bold">)</span> <span style="font-weight: bold">+</span> <span style="color: #bb8844">&quot;/views/&quot;</span> <span style="font-weight: bold">+</span> urlEncode<span style="font-weight: bold">(</span>viewId<span style="font-weight: bold">)</span>
+	<span style="color: #445588; font-weight: bold">ObpPost</span><span style="font-weight: bold">(</span>grantPermissionUrl<span style="font-weight: bold">,</span> <span style="font-weight: bold">new</span> <span style="color: #445588; font-weight: bold">JObject</span><span style="font-weight: bold">(</span><span style="color: #445588; font-weight: bold">Nil</span><span style="font-weight: bold">))</span>
+<span style="font-weight: bold">}</span>
+</pre></div>
+
+                    </div>
+                </div>
+                <!-- /scala -->
+            </div>
+            <!-- /examples -->
+
+            <!-- api list -->
+            <div>
+            <!--<a id="2_1_0-getConsumer" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Consumer<span class="warning">TO BE REMOVED</span>
+        </h3><h5>API path</h5><code>/management/consumers/CONSUMER_ID</code><h5>Output</h5><code>{ }</code><h5>Description</h5><p><p>Get the Consumer specified by CONSUMER_ID.</p></p></div>
+            <a id="2_1_0-getConsumers" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Consumers<span class="warning">TO BE REMOVED</span>
+        </h3><h5>API path</h5><code>/management/consumers</code><h5>Output</h5><code>{ }</code><h5>Description</h5><p><p>Get the all Consumers.</p></p></div>-->
+            <a id="2_0_0-coreAccountById" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Account by Id (Core)
+        </h3><h5>API path</h5><code>/my/banks/BANK_ID/accounts/ACCOUNT_ID/account</code><h5>Output</h5><code><pre>{
+    "id": "05237266-b334-4704-a087-5b460a2ecf04",
+    "label": "Dont tell wife account.",
+    "number": "13759969699",
+    "owners": [
+        {
+            "id": "robert.yuk.y@example.com",
+            "provider": "http:\/\/127.0.0.1:8080",
+            "display_name": "robert.yuk.y@example.com"
+        }
+    ],
+    "type": "CURRENT PLUS",
+    "balance": {
+        "currency": "GBP",
+        "amount": "7900.00"
+    },
+    "IBAN": "BA1212345123451375996969977",
+    "swift_bic": null,
+    "bank_id": "psd201-bank-y--uk"
+}</pre></code><h5>Description</h5><p><p>Information returned about the account specified by ACCOUNT_ID:</p><ul>  <li>Number</li>  <li>Owners</li>  <li>Type</li>  <li>Balance</li>  <li>IBAN</li></ul><p>This call returns the owner view and requires access to that view.</p></p></div>
+            <a id="2_0_0-accountById" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Account by Id (Full)
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/account</code><h5>Output</h5><code><pre>{
+    "id": "05237266-b334-4704-a087-5b460a2ecf04",
+    "label": "Dont tell wife account.",
+    "number": "13759969699",
+    "owners": [
+        {
+            "id": "robert.yuk.y@example.com",
+            "provider": "http:\/\/127.0.0.1:8080",
+            "display_name": "robert.yuk.y@example.com"
+        }
+    ],
+    "type": "CURRENT PLUS",
+    "balance": {
+        "currency": "GBP",
+        "amount": "7900.00"
+    },
+    "IBAN": "BA1212345123451375996969977",
+    "swift_bic": null,
+    "views_available": [
+        {
+            "id": "owner",
+            "short_name": "Owner",
+            "description": "Owner View",
+            "is_public": false,
+            "alias": "",
+            "hide_metadata_if_alias_used": false,
+            "can_add_comment": true,
+            "can_add_corporate_location": true,
+            "can_add_image": true,
+            "can_add_image_url": true,
+            "can_add_more_info": true,
+            "can_add_open_corporates_url": true,
+            "can_add_physical_location": true,
+            "can_add_private_alias": true,
+            "can_add_public_alias": true,
+            "can_add_tag": true,
+            "can_add_url": true,
+            "can_add_where_tag": true,
+            "can_delete_comment": true,
+            "can_delete_corporate_location": true,
+            "can_delete_image": true,
+            "can_delete_physical_location": true,
+            "can_delete_tag": true,
+            "can_delete_where_tag": true,
+            "can_edit_owner_comment": true,
+            "can_see_bank_account_balance": true,
+            "can_see_bank_account_bank_name": true,
+            "can_see_bank_account_currency": true,
+            "can_see_bank_account_iban": true,
+            "can_see_bank_account_label": true,
+            "can_see_bank_account_national_identifier": true,
+            "can_see_bank_account_number": true,
+            "can_see_bank_account_owners": true,
+            "can_see_bank_account_swift_bic": true,
+            "can_see_bank_account_type": true,
+            "can_see_comments": true,
+            "can_see_corporate_location": true,
+            "can_see_image_url": true,
+            "can_see_images": true,
+            "can_see_more_info": true,
+            "can_see_open_corporates_url": true,
+            "can_see_other_account_bank_name": true,
+            "can_see_other_account_iban": true,
+            "can_see_other_account_kind": true,
+            "can_see_other_account_metadata": true,
+            "can_see_other_account_national_identifier": true,
+            "can_see_other_account_number": true,
+            "can_see_other_account_swift_bic": true,
+            "can_see_owner_comment": true,
+            "can_see_physical_location": true,
+            "can_see_private_alias": true,
+            "can_see_public_alias": true,
+            "can_see_tags": true,
+            "can_see_transaction_amount": true,
+            "can_see_transaction_balance": true,
+            "can_see_transaction_currency": true,
+            "can_see_transaction_description": true,
+            "can_see_transaction_finish_date": true,
+            "can_see_transaction_metadata": true,
+            "can_see_transaction_other_bank_account": true,
+            "can_see_transaction_start_date": true,
+            "can_see_transaction_this_bank_account": true,
+            "can_see_transaction_type": true,
+            "can_see_url": true,
+            "can_see_where_tag": true
+        }
+    ],
+    "bank_id": "psd201-bank-y--uk"
+}</pre></code><h5>Description</h5><p><p>Information returned about an account specified by ACCOUNT_ID as moderated by the view (VIEW_ID):</p><ul>  <li>Number</li>  <li>Owners</li>  <li>Type</li>  <li>Balance</li>  <li>IBAN</li>  <li>Available views (sorted by short_name)</li></ul><p>PSD2 Context: PSD2 requires customers to have access to their account information via third party applications. This call provides balance and other account information via delegated authenticaiton using OAuth.</p><p>OAuth authentication is required if the 'is_public' field in view (VIEW_ID) is not set to true.</p></p></div>
+            <a id="2_0_0-privateAccountsAllBanks" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Accounts at all Banks (Private)
+        </h3><h5>API path</h5><code>/my/accounts</code><h5>Output</h5><code><pre>[
+    {
+        "id": "05237266-b334-4704-a087-5b460a2ecf04",
+        "label": "Dont tell wife account.",
+        "bank_id": "psd201-bank-y--uk",
+        "_links": {
+            "self": {
+                "href": "http:\/\/127.0.0.1:8080\/obp\/v2.0.0\/my\/accounts"
+            },
+            "detail": {
+                "href": "http:\/\/127.0.0.1:8080\/obp\/v2.0.0\/my\/banks\/psd201-bank-y--uk\/accounts\/05237266-b334-4704-a087-5b460a2ecf04\/account"
+            }
+        }
+    }
+]</pre></code><h5>Description</h5><p><p>Get private accounts at all banks (Authenticated access) Returns the list of accounts containing private views for the user at all banks. For each account the API returns the ID and the available views.</p><p>Authentication is Mandatory</p></p></div>
+            <a id="2_0_0-allAccountsAtOneBank" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Accounts at one Bank (Public and Private).
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts</code><h5>Output</h5><code><pre>{
+    "accounts": [
+        {
+            "id": "05237266-b334-4704-a087-5b460a2ecf04",
+            "label": "Dont tell wife account.",
+            "views_available": [
+                {
+                    "id": "owner",
+                    "short_name": "Owner",
+                    "description": "Owner View",
+                    "is_public": false,
+                    "alias": "",
+                    "hide_metadata_if_alias_used": false,
+                    "can_add_comment": true,
+                    "can_add_corporate_location": true,
+                    "can_add_image": true,
+                    "can_add_image_url": true,
+                    "can_add_more_info": true,
+                    "can_add_open_corporates_url": true,
+                    "can_add_physical_location": true,
+                    "can_add_private_alias": true,
+                    "can_add_public_alias": true,
+                    "can_add_tag": true,
+                    "can_add_url": true,
+                    "can_add_where_tag": true,
+                    "can_delete_comment": true,
+                    "can_delete_corporate_location": true,
+                    "can_delete_image": true,
+                    "can_delete_physical_location": true,
+                    "can_delete_tag": true,
+                    "can_delete_where_tag": true,
+                    "can_edit_owner_comment": true,
+                    "can_see_bank_account_balance": true,
+                    "can_see_bank_account_bank_name": true,
+                    "can_see_bank_account_currency": true,
+                    "can_see_bank_account_iban": true,
+                    "can_see_bank_account_label": true,
+                    "can_see_bank_account_national_identifier": true,
+                    "can_see_bank_account_number": true,
+                    "can_see_bank_account_owners": true,
+                    "can_see_bank_account_swift_bic": true,
+                    "can_see_bank_account_type": true,
+                    "can_see_comments": true,
+                    "can_see_corporate_location": true,
+                    "can_see_image_url": true,
+                    "can_see_images": true,
+                    "can_see_more_info": true,
+                    "can_see_open_corporates_url": true,
+                    "can_see_other_account_bank_name": true,
+                    "can_see_other_account_iban": true,
+                    "can_see_other_account_kind": true,
+                    "can_see_other_account_metadata": true,
+                    "can_see_other_account_national_identifier": true,
+                    "can_see_other_account_number": true,
+                    "can_see_other_account_swift_bic": true,
+                    "can_see_owner_comment": true,
+                    "can_see_physical_location": true,
+                    "can_see_private_alias": true,
+                    "can_see_public_alias": true,
+                    "can_see_tags": true,
+                    "can_see_transaction_amount": true,
+                    "can_see_transaction_balance": true,
+                    "can_see_transaction_currency": true,
+                    "can_see_transaction_description": true,
+                    "can_see_transaction_finish_date": true,
+                    "can_see_transaction_metadata": true,
+                    "can_see_transaction_other_bank_account": true,
+                    "can_see_transaction_start_date": true,
+                    "can_see_transaction_this_bank_account": true,
+                    "can_see_transaction_type": true,
+                    "can_see_url": true,
+                    "can_see_where_tag": true
+                }
+            ],
+            "bank_id": "psd201-bank-y--uk"
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Get accounts at one bank that the user has access to (Authenticated + Anonymous access). Returns the list of accounts at BANK_ID that the user has access to. For each account the API returns the account ID and the available views.</p><p>If the user is not authenticated, the list will contain only the accounts providing public views.</p></p></div>
+            <a id="2_0_0-getCoreTransactionsForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Transactions for Account (Core)
+        </h3><h5>API path</h5><code>/my/banks/BANK_ID/accounts/ACCOUNT_ID/transactions</code><h5>Output</h5><code><pre>
+{
+    "transactions": [
+        {
+            "id": "a495bcbd-e5b7-49d0-b82d-ad749273c8e4",
+            "account": {
+                "id": "05237266-b334-4704-a087-5b460a2ecf04",
+                "holders": [
+                    {
+                        "name": "robert.yuk.y@example.com",
+                        "is_alias": false
+                    }
+                ],
+                "number": "13759969699",
+                "kind": "CURRENT PLUS",
+                "IBAN": "BA1212345123451375996969977",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": null,
+                    "name": "The Bank of Y"
+                }
+            },
+            "counterparty": {
+                "id": "e2ad2861-54ae-4c49-8fe7-ca489adc82fc",
+                "holder": {
+                    "name": ""
+                },
+                "number": "13759969699",
+                "kind": "CURRENT PLUS",
+                "IBAN": "BA1212345123451375996969977",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": null,
+                    "name": "The Bank of X"
+                }
+            },
+            "details": {
+                "type": "sandbox-payment",
+                "description": "Party at bar with no wife :)",
+                "posted": "2017-03-17T12:37:41Z",
+                "completed": "2017-03-17T12:37:41Z",
+                "new_balance": {
+                    "currency": "GBP",
+                    "amount": "7900.00"
+                },
+                "value": {
+                    "currency": "GBP",
+                    "amount": "-83.79"
+                }
+            }
+        }
+     ]
+}
+            </pre></code><h5>Description</h5><p><p>Returns transactions list (Core info) of the account specified by ACCOUNT_ID.</p><p>Authentication is required.</p><p>Possible custom headers for pagination:</p><ul>  <li>obp_sort_by=CRITERIA ==&gt; default value: "completed" field</li>  <li>obp_sort_direction=ASC/DESC ==&gt; default value: DESC</li>  <li>obp_limit=NUMBER ==&gt; default value: 50</li>  <li>obp_offset=NUMBER ==&gt; default value: 0</li>  <li>obp_from_date=DATE =&gt; default value: date of the oldest transaction registered (format below)</li>  <li>obp_to_date=DATE =&gt; default value: date of the newest transaction registered (format below)</li></ul><p><strong>Date format parameter</strong>: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" (2014-07-01T00:00:00.000Z) ==&gt; time zone is UTC.</p></p></div>
+            <a id="1_2_1-getTransactionsForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Transactions for Account (Full)
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions</code><h5>Output</h5><code><pre>{
+    "transactions": [
+        {
+            "id": "a495bcbd-e5b7-49d0-b82d-ad749273c8e4",
+            "this_account": {
+                "id": "05237266-b334-4704-a087-5b460a2ecf04",
+                "holders": [
+                    {
+                        "name": "robert.yuk.y@example.com",
+                        "is_alias": false
+                    }
+                ],
+                "number": "13759969699",
+                "kind": "CURRENT PLUS",
+                "IBAN": "BA1212345123451375996969977",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": null,
+                    "name": "The Bank of Y"
+                }
+            },
+            "other_account": {
+                "id": "e2ad2861-54ae-4c49-8fe7-ca489adc82fc",
+                "holder": {
+                    "name": "",
+                    "is_alias": false
+                },
+                "number": "13759969699",
+                "kind": "CURRENT PLUS",
+                "IBAN": "BA1212345123451375996969977",
+                "swift_bic": null,
+                "bank": {
+                    "national_identifier": null,
+                    "name": "The Bank of X"
+                },
+                "metadata": {
+                    "public_alias": "ALIAS_0BFC3A",
+                    "private_alias": null,
+                    "more_info": null,
+                    "URL": null,
+                    "image_URL": null,
+                    "open_corporates_URL": null,
+                    "corporate_location": null,
+                    "physical_location": null
+                }
+            },
+            "details": {
+                "type": "sandbox-payment",
+                "description": "Party at bar with no wife :)",
+                "posted": "2017-03-17T12:37:41Z",
+                "completed": "2017-03-17T12:37:41Z",
+                "new_balance": {
+                    "currency": "GBP",
+                    "amount": "7900.00"
+                },
+                "value": {
+                    "currency": "GBP",
+                    "amount": "-83.79"
+                }
+            },
+            "metadata": {
+                "narrative": null,
+                "comments": [],
+                "tags": [],
+                "images": [],
+                "where": null
+            }
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Returns transactions list of the account specified by ACCOUNT_ID and moderated by the view (VIEW_ID).</p><p>Authentication via OAuth is required if the view is not public.</p><p>Possible custom headers for pagination:</p><ul>  <li>obp_sort_by=CRITERIA ==&gt; default value: "completed" field</li>  <li>obp_sort_direction=ASC/DESC ==&gt; default value: DESC</li>  <li>obp_limit=NUMBER ==&gt; default value: 50</li>  <li>obp_offset=NUMBER ==&gt; default value: 0</li>  <li>obp_from_date=DATE =&gt; default value: date of the oldest transaction registered (format below)</li>  <li>obp_to_date=DATE =&gt; default value: date of the newest transaction registered (format below)</li></ul><p><strong>Date format parameter</strong>: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" (2014-07-01T00:00:00.000Z) ==&gt; time zone is UTC.</p></p></div>
+            <a id="1_2_1-getViewsForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Views for Account.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/views</code><h5>Output</h5><code><pre>{
+    "views": [
+        {
+            "id": "owner",
+            "short_name": "Owner",
+            "description": "Owner View",
+            "is_public": false,
+            "alias": "",
+            "hide_metadata_if_alias_used": false,
+            "can_add_comment": true,
+            "can_add_corporate_location": true,
+            "can_add_image": true,
+            "can_add_image_url": true,
+            "can_add_more_info": true,
+            "can_add_open_corporates_url": true,
+            "can_add_physical_location": true,
+            "can_add_private_alias": true,
+            "can_add_public_alias": true,
+            "can_add_tag": true,
+            "can_add_url": true,
+            "can_add_where_tag": true,
+            "can_delete_comment": true,
+            "can_delete_corporate_location": true,
+            "can_delete_image": true,
+            "can_delete_physical_location": true,
+            "can_delete_tag": true,
+            "can_delete_where_tag": true,
+            "can_edit_owner_comment": true,
+            "can_see_bank_account_balance": true,
+            "can_see_bank_account_bank_name": true,
+            "can_see_bank_account_currency": true,
+            "can_see_bank_account_iban": true,
+            "can_see_bank_account_label": true,
+            "can_see_bank_account_national_identifier": true,
+            "can_see_bank_account_number": true,
+            "can_see_bank_account_owners": true,
+            "can_see_bank_account_swift_bic": true,
+            "can_see_bank_account_type": true,
+            "can_see_comments": true,
+            "can_see_corporate_location": true,
+            "can_see_image_url": true,
+            "can_see_images": true,
+            "can_see_more_info": true,
+            "can_see_open_corporates_url": true,
+            "can_see_other_account_bank_name": true,
+            "can_see_other_account_iban": true,
+            "can_see_other_account_kind": true,
+            "can_see_other_account_metadata": true,
+            "can_see_other_account_national_identifier": true,
+            "can_see_other_account_number": true,
+            "can_see_other_account_swift_bic": true,
+            "can_see_owner_comment": true,
+            "can_see_physical_location": true,
+            "can_see_private_alias": true,
+            "can_see_public_alias": true,
+            "can_see_tags": true,
+            "can_see_transaction_amount": true,
+            "can_see_transaction_balance": true,
+            "can_see_transaction_currency": true,
+            "can_see_transaction_description": true,
+            "can_see_transaction_finish_date": true,
+            "can_see_transaction_metadata": true,
+            "can_see_transaction_other_bank_account": true,
+            "can_see_transaction_start_date": true,
+            "can_see_transaction_this_bank_account": true,
+            "can_see_transaction_type": true,
+            "can_see_url": true,
+            "can_see_where_tag": true
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Views in Open Bank Project provide a mechanism for fine grained access control and delegation to Accounts and Transactions. Account holders use the 'owner' view by default. Delegated access is made through other views for example 'accountants', 'share-holders' or 'tagging-application'.</p><p>Views on accounts and transactions filter the underlying data to redact certain fields for certain users. For instance the balance on an account may be hidden from the public. The way to know what is possible on a view is determined in the following JSON.</p><p>When a view moderates a set of data, some fields my contain the value null rather than the original value. This indicates either that the user is not allowed to see the original data or the field is empty.</p><p>There is currently one exception to this rule; the 'holder' field in the JSON contains always a value which is either an alias or the real name - indicated by the 'is_alias' field.</p><p>When a user performs an action like trying to post a comment (with POST API call), if he is not allowed, the body response will contain an error message.</p><p>Transaction metadata (like images, tags, comments, etc.) will appears <em>ONLY</em> on the view where they have been created e.g. comments posted to the public view only appear on the public view.</p><p>The other account metadata fields (like image_URL, more_info, etc.) are unique through all the views. Example, if a user edits the 'more_info' field in the 'team' view, then the view 'authorities' will show the new value (if it is allowed to do it).</p><p>OAuth authentication is required and the user needs to have access to the owner view.</p></p></div>
+            <a id="1_2_1-allAccountsAtOneBank" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get accounts at one bank (Autheneticated + Anonymous access).
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts</code><h5>Output</h5><code><pre>{
+    "accounts": [
+        {
+            "id": "05237266-b334-4704-a087-5b460a2ecf04",
+            "label": "Dont tell wife account.",
+            "views_available": [
+                {
+                    "id": "owner",
+                    "short_name": "Owner",
+                    "description": "Owner View",
+                    "is_public": false,
+                    "alias": "",
+                    "hide_metadata_if_alias_used": false,
+                    "can_add_comment": true,
+                    "can_add_corporate_location": true,
+                    "can_add_image": true,
+                    "can_add_image_url": true,
+                    "can_add_more_info": true,
+                    "can_add_open_corporates_url": true,
+                    "can_add_physical_location": true,
+                    "can_add_private_alias": true,
+                    "can_add_public_alias": true,
+                    "can_add_tag": true,
+                    "can_add_url": true,
+                    "can_add_where_tag": true,
+                    "can_delete_comment": true,
+                    "can_delete_corporate_location": true,
+                    "can_delete_image": true,
+                    "can_delete_physical_location": true,
+                    "can_delete_tag": true,
+                    "can_delete_where_tag": true,
+                    "can_edit_owner_comment": true,
+                    "can_see_bank_account_balance": true,
+                    "can_see_bank_account_bank_name": true,
+                    "can_see_bank_account_currency": true,
+                    "can_see_bank_account_iban": true,
+                    "can_see_bank_account_label": true,
+                    "can_see_bank_account_national_identifier": true,
+                    "can_see_bank_account_number": true,
+                    "can_see_bank_account_owners": true,
+                    "can_see_bank_account_swift_bic": true,
+                    "can_see_bank_account_type": true,
+                    "can_see_comments": true,
+                    "can_see_corporate_location": true,
+                    "can_see_image_url": true,
+                    "can_see_images": true,
+                    "can_see_more_info": true,
+                    "can_see_open_corporates_url": true,
+                    "can_see_other_account_bank_name": true,
+                    "can_see_other_account_iban": true,
+                    "can_see_other_account_kind": true,
+                    "can_see_other_account_metadata": true,
+                    "can_see_other_account_national_identifier": true,
+                    "can_see_other_account_number": true,
+                    "can_see_other_account_swift_bic": true,
+                    "can_see_owner_comment": true,
+                    "can_see_physical_location": true,
+                    "can_see_private_alias": true,
+                    "can_see_public_alias": true,
+                    "can_see_tags": true,
+                    "can_see_transaction_amount": true,
+                    "can_see_transaction_balance": true,
+                    "can_see_transaction_currency": true,
+                    "can_see_transaction_description": true,
+                    "can_see_transaction_finish_date": true,
+                    "can_see_transaction_metadata": true,
+                    "can_see_transaction_other_bank_account": true,
+                    "can_see_transaction_start_date": true,
+                    "can_see_transaction_this_bank_account": true,
+                    "can_see_transaction_type": true,
+                    "can_see_url": true,
+                    "can_see_where_tag": true
+                }
+            ],
+            "bank_id": "psd201-bank-y--uk"
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Returns the list of accounts at BANK_ID that the user has access to. For each account the API returns the account ID and the available views.</p><p>If the user is not authenticated via OAuth, the list will contain only the accounts providing public views.</p></p></div>
+            <a id="1_2_1-privateAccountsAtOneBank" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get private accounts at one bank (Authenticated access).
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/private</code><h5>Output</h5><code><pre>{
+    "accounts": [
+        {
+            "id": "05237266-b334-4704-a087-5b460a2ecf04",
+            "label": "Dont tell wife account.",
+            "views_available": [
+                {
+                    "id": "owner",
+                    "short_name": "Owner",
+                    "description": "Owner View",
+                    "is_public": false,
+                    "alias": "",
+                    "hide_metadata_if_alias_used": false,
+                    "can_add_comment": true,
+                    "can_add_corporate_location": true,
+                    "can_add_image": true,
+                    "can_add_image_url": true,
+                    "can_add_more_info": true,
+                    "can_add_open_corporates_url": true,
+                    "can_add_physical_location": true,
+                    "can_add_private_alias": true,
+                    "can_add_public_alias": true,
+                    "can_add_tag": true,
+                    "can_add_url": true,
+                    "can_add_where_tag": true,
+                    "can_delete_comment": true,
+                    "can_delete_corporate_location": true,
+                    "can_delete_image": true,
+                    "can_delete_physical_location": true,
+                    "can_delete_tag": true,
+                    "can_delete_where_tag": true,
+                    "can_edit_owner_comment": true,
+                    "can_see_bank_account_balance": true,
+                    "can_see_bank_account_bank_name": true,
+                    "can_see_bank_account_currency": true,
+                    "can_see_bank_account_iban": true,
+                    "can_see_bank_account_label": true,
+                    "can_see_bank_account_national_identifier": true,
+                    "can_see_bank_account_number": true,
+                    "can_see_bank_account_owners": true,
+                    "can_see_bank_account_swift_bic": true,
+                    "can_see_bank_account_type": true,
+                    "can_see_comments": true,
+                    "can_see_corporate_location": true,
+                    "can_see_image_url": true,
+                    "can_see_images": true,
+                    "can_see_more_info": true,
+                    "can_see_open_corporates_url": true,
+                    "can_see_other_account_bank_name": true,
+                    "can_see_other_account_iban": true,
+                    "can_see_other_account_kind": true,
+                    "can_see_other_account_metadata": true,
+                    "can_see_other_account_national_identifier": true,
+                    "can_see_other_account_number": true,
+                    "can_see_other_account_swift_bic": true,
+                    "can_see_owner_comment": true,
+                    "can_see_physical_location": true,
+                    "can_see_private_alias": true,
+                    "can_see_public_alias": true,
+                    "can_see_tags": true,
+                    "can_see_transaction_amount": true,
+                    "can_see_transaction_balance": true,
+                    "can_see_transaction_currency": true,
+                    "can_see_transaction_description": true,
+                    "can_see_transaction_finish_date": true,
+                    "can_see_transaction_metadata": true,
+                    "can_see_transaction_other_bank_account": true,
+                    "can_see_transaction_start_date": true,
+                    "can_see_transaction_this_bank_account": true,
+                    "can_see_transaction_type": true,
+                    "can_see_url": true,
+                    "can_see_where_tag": true
+                }
+            ],
+            "bank_id": "psd201-bank-y--uk"
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Returns the list of private (non-public) accounts at BANK_ID that the user has access to. For each account the API returns the ID and the available views.</p><p>Authentication via OAuth is required.</p></p></div>
+            <a id="1_2_1-publicAccountsAtOneBank" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get public accounts at one bank (Anonymous access).
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/public</code><h5>Output</h5><code><pre>{
+    "accounts": [
+        {
+            "id": "05237266-b334-4704-a087-5b460a2ecf04",
+            "label": "Dont tell wife account.",
+            "views_available": [
+                {
+                    "id": "accountant",
+                    "short_name": "Accountant",
+                    "description": "Accountants View",
+                    "is_public": true,
+                    "alias": "public",
+                    "hide_metadata_if_alias_used": true,
+                    "can_add_comment": true,
+                    "can_add_corporate_location": true,
+                    "can_add_image": true,
+                    "can_add_image_url": true,
+                    "can_add_more_info": true,
+                    "can_add_open_corporates_url": true,
+                    "can_add_physical_location": true,
+                    "can_add_private_alias": true,
+                    "can_add_public_alias": true,
+                    "can_add_tag": true,
+                    "can_add_url": true,
+                    "can_add_where_tag": true,
+                    "can_delete_comment": true,
+                    "can_delete_corporate_location": true,
+                    "can_delete_image": true,
+                    "can_delete_physical_location": true,
+                    "can_delete_tag": true,
+                    "can_delete_where_tag": true,
+                    "can_edit_owner_comment": true,
+                    "can_see_bank_account_balance": true,
+                    "can_see_bank_account_bank_name": true,
+                    "can_see_bank_account_currency": true,
+                    "can_see_bank_account_iban": true,
+                    "can_see_bank_account_label": true,
+                    "can_see_bank_account_national_identifier": true,
+                    "can_see_bank_account_number": true,
+                    "can_see_bank_account_owners": true,
+                    "can_see_bank_account_swift_bic": true,
+                    "can_see_bank_account_type": true,
+                    "can_see_comments": true,
+                    "can_see_corporate_location": true,
+                    "can_see_image_url": true,
+                    "can_see_images": true,
+                    "can_see_more_info": true,
+                    "can_see_open_corporates_url": true,
+                    "can_see_other_account_bank_name": true,
+                    "can_see_other_account_iban": true,
+                    "can_see_other_account_kind": true,
+                    "can_see_other_account_metadata": true,
+                    "can_see_other_account_national_identifier": true,
+                    "can_see_other_account_number": true,
+                    "can_see_other_account_swift_bic": true,
+                    "can_see_owner_comment": true,
+                    "can_see_physical_location": true,
+                    "can_see_private_alias": true,
+                    "can_see_public_alias": true,
+                    "can_see_tags": true,
+                    "can_see_transaction_amount": true,
+                    "can_see_transaction_balance": true,
+                    "can_see_transaction_currency": true,
+                    "can_see_transaction_description": false,
+                    "can_see_transaction_finish_date": true,
+                    "can_see_transaction_metadata": true,
+                    "can_see_transaction_other_bank_account": true,
+                    "can_see_transaction_start_date": true,
+                    "can_see_transaction_this_bank_account": true,
+                    "can_see_transaction_type": true,
+                    "can_see_url": true,
+                    "can_see_where_tag": true
+                }
+            ],
+            "bank_id": "psd201-bank-y--uk"
+        }
+    ]
+}</pre></code><h5>Description</h5><p><p>Returns a list of the public accounts at BANK_ID. For each account the API returns the ID and the available views.</p><p>Authentication via OAuth is not required.</p></p></div>
+            <a id="1_2_1-getTransactionByIdForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get transaction by id.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions/TRANSACTION_ID/transaction</code><h5>Output</h5><code><pre>{
+    "id": "a495bcbd-e5b7-49d0-b82d-ad749273c8e4",
+    "this_account": {
+        "id": "05237266-b334-4704-a087-5b460a2ecf04",
+        "holders": [
+            {
+                "name": "robert.yuk.y@example.com",
+                "is_alias": false
+            }
+        ],
+        "number": "13759969699",
+        "kind": "CURRENT PLUS",
+        "IBAN": "BA1212345123451375996969977",
+        "swift_bic": null,
+        "bank": {
+            "national_identifier": null,
+            "name": "The Bank of Y"
+        }
+    },
+    "other_account": {
+        "id": "e2ad2861-54ae-4c49-8fe7-ca489adc82fc",
+        "holder": {
+            "name": "",
+            "is_alias": false
+        },
+        "number": "13759969699",
+        "kind": "CURRENT PLUS",
+        "IBAN": "BA1212345123451375996969977",
+        "swift_bic": null,
+        "bank": {
+            "national_identifier": null,
+            "name": "The Bank of X"
+        },
+        "metadata": {
+            "public_alias": "ALIAS_0BFC3A",
+            "private_alias": null,
+            "more_info": null,
+            "URL": null,
+            "image_URL": null,
+            "open_corporates_URL": null,
+            "corporate_location": null,
+            "physical_location": null
+        }
+    },
+    "details": {
+        "type": "sandbox-payment",
+        "description": "Party at bar with no wife :)",
+        "posted": "2017-03-17T12:37:41Z",
+        "completed": "2017-03-17T12:37:41Z",
+        "new_balance": {
+            "currency": "GBP",
+            "amount": "7900.00"
+        },
+        "value": {
+            "currency": "GBP",
+            "amount": "-83.79"
+        }
+    },
+    "metadata": {
+        "narrative": null,
+        "comments": [],
+        "tags": [],
+        "images": [],
+        "where": null
+    }
+}</pre></code><h5>Description</h5><p><p>Returns one transaction specified by TRANSACTION_ID of the account ACCOUNT_ID and moderated by the view (VIEW_ID).</p><p>Authentication via OAuth is required if the view is not public.</p></p></div>
+            <a id="1_2_1-updateAccountLabel" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Update Account Label.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID</code><h5>Input</h5><code>{  "id":"ACCOUNT_ID of the account we want to update",  "label":"New label",  "bank_id":"BANK_ID"}</code><h5>Output</h5><code><pre>{
+    "success": "ok"
+}</pre></code><h5>Description</h5><p><p>Update the label for the account. The label is how the account is known to the account owner e.g. 'My savings account' </p></p></div>
+            <a id="1_2_1-updateViewForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Update View.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/views/VIEW_ID</code><h5>Input</h5><code>{  "description":"New description of view",  "is_public":false,  "which_alias_to_use":"_public_",  "hide_metadata_if_alias_used":true,  "allowed_actions":["can_see_transaction_start_date","can_see_bank_account_label"]}</code><h5>Output</h5><code><pre>{
+  "id":"owner",
+  "short_name":"Owner",
+  "description":"New description of view",
+  "is_public":false,
+  "alias":"",
+  "hide_metadata_if_alias_used":true,
+  "can_add_comment":false,
+  "can_add_corporate_location":false,
+  "can_add_image":false,
+  "can_add_image_url":false,
+  "can_add_more_info":false,
+  "can_add_open_corporates_url":false,
+  "can_add_physical_location":false,
+  "can_add_private_alias":false,
+  "can_add_public_alias":false,
+  "can_add_tag":false,
+  "can_add_url":false,
+  "can_add_where_tag":false,
+  "can_delete_comment":false,
+  "can_delete_corporate_location":false,
+  "can_delete_image":false,
+  "can_delete_physical_location":false,
+  "can_delete_tag":false,
+  "can_delete_where_tag":false,
+  "can_edit_owner_comment":false,
+  "can_see_bank_account_balance":false,
+  "can_see_bank_account_bank_name":false,
+  "can_see_bank_account_currency":false,
+  "can_see_bank_account_iban":false,
+  "can_see_bank_account_label":true,
+  "can_see_bank_account_national_identifier":false,
+  "can_see_bank_account_number":false,
+  "can_see_bank_account_owners":false,
+  "can_see_bank_account_swift_bic":false,
+  "can_see_bank_account_type":false,
+  "can_see_comments":false,
+  "can_see_corporate_location":false,
+  "can_see_image_url":false,
+  "can_see_images":false,
+  "can_see_more_info":false,
+  "can_see_open_corporates_url":false,
+  "can_see_other_account_bank_name":false,
+  "can_see_other_account_iban":false,
+  "can_see_other_account_kind":false,
+  "can_see_other_account_metadata":false,
+  "can_see_other_account_national_identifier":false,
+  "can_see_other_account_number":false,
+  "can_see_other_account_swift_bic":false,
+  "can_see_owner_comment":false,
+  "can_see_physical_location":false,
+  "can_see_private_alias":false,
+  "can_see_public_alias":false,
+  "can_see_tags":false,
+  "can_see_transaction_amount":false,
+  "can_see_transaction_balance":false,
+  "can_see_transaction_currency":false,
+  "can_see_transaction_description":false,
+  "can_see_transaction_finish_date":false,
+  "can_see_transaction_metadata":false,
+  "can_see_transaction_other_bank_account":false,
+  "can_see_transaction_start_date":true,
+  "can_see_transaction_this_bank_account":false,
+  "can_see_transaction_type":false,
+  "can_see_url":false,
+  "can_see_where_tag":false
+}</pre></code><h5>Description</h5><p><p>Update an existing view on a bank account</p><p>OAuth authentication is required and the user needs to have access to the owner view.</p></p></div>
+            <a id="1_2_1-bankById" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank
+        </h3><h5>API path</h5><code>/banks/BANK_ID</code><h5>Output</h5><code><pre>{
+  "id":"psd201-bank-y--uk",
+  "short_name":"Bank Y",
+  "full_name":"The Bank of Y",
+  "logo":"https://static.openbankproject.com/images/sandbox/bank_y.png",
+  "website":"https://www.example.com"
+}</pre></code><h5>Description</h5><p><p>Get the bank specified by BANK_ID Returns information about a single bank specified by BANK_ID including:</p><ul>  <li>Short and full name of bank</li>  <li>Logo URL</li>  <li>Website</li></ul></p></div>
+            <a id="1_4_0-getAtms" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank ATMS
+        </h3><h5>API path</h5><code>/banks/BANK_ID/atms</code><h5>Output</h5><code><pre>{
+  "atms":[{
+    "id":"feef-78987",
+    "name":"Somewhere here",
+    "address":{
+      "line_1":"540A LANARK ROAD",
+      "line_2":"",
+      "line_3":"",
+      "city":"EDINBURGH",
+      "state":"",
+      "postcode":"EH14 5EL",
+      "country":"GB"
+    },
+    "location":{
+      "latitude":55.912969,
+      "longitude":-3.38662
+    },
+    "meta":{
+      "license":{
+        "id":"copyrightENBDG2016",
+        "name":"Copyright 2016 ENBDG"
+      }
+    }
+  },{
+    "id":"ab92-234",
+    "name":"Somewhere there",
+    "address":{
+      "line_1":"MARKET PLACE",
+      "line_2":"",
+      "line_3":"",
+      "city":"EYEMOUTH",
+      "state":"",
+      "postcode":"TD14 5HE",
+      "country":"GB"
+    },
+    "location":{
+      "latitude":55.882244,
+      "longitude":-2.099188
+    },
+    "meta":{
+      "license":{
+        "id":"copyrightENBDG2016",
+        "name":"Copyright 2016 ENBDG"
+      }
+    }
+  }]
+}</pre></code><h5>Description</h5><p><p>Returns information about ATMs for a single bank specified by BANK_ID including:</p><ul>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under</li></ul><p>Authentication is Optional</p></p></div>
+            <a id="2_1_0-getBranch" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank Branch
+        </h3><h5>API path</h5><code>/banks/BANK_ID/branches/BRANCH_ID</code><h5>Output</h5><code><pre>{
+  "id":"721a-18484",
+  "name":"Other Place",
+  "address":{
+    "line_1":"Warrington Street",
+    "line_2":"",
+    "line_3":"",
+    "city":"Ashton Under Lyne",
+    "state":"",
+    "postcode":"OL6 6JL",
+    "country":"GB"
+  },
+  "location":{
+    "latitude":54.488144,
+    "longitude":-2.093318
+  },
+  "lobby":{
+    "hours":"Monday: 09:00 - 17:00</br>Tuesday: 09:00 - 17:00</br>Wednesday: 09:30 - 17:00</br>Thursday: 09:00 - 17:00</br>Friday: 09:00 - 17:00</br>Saturday: 09:00 - 13:00</br>Sunday: Closed"
+  },
+  "drive_up":{
+    "hours":""
+  },
+  "meta":{
+    "license":{
+      "id":"copyright2016",
+      "name":"Copyright ENBDG 2016"
+    }
+  }
+}</pre></code><h5>Description</h5><p><p>Returns information about branches for a single bank specified by BANK_ID and BRANCH_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under</li></ul><p>Authentication is Optional</p></p></div>
+            <a id="1_4_0-getBranches" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank Branches
+        </h3><h5>API path</h5><code>/banks/BANK_ID/branches</code><h5>Output</h5><code><pre>{
+  "branches":[{
+    "id":"721a-18484",
+    "name":"Other Place",
+    "address":{
+      "line_1":"Warrington Street",
+      "line_2":"",
+      "line_3":"",
+      "city":"Ashton Under Lyne",
+      "state":"",
+      "postcode":"OL6 6JL",
+      "country":"GB"
+    },
+    "location":{
+      "latitude":54.488144,
+      "longitude":-2.093318
+    },
+    "lobby":{
+      "hours":"Monday: 09:00 - 17:00</br>Tuesday: 09:00 - 17:00</br>Wednesday: 09:30 - 17:00</br>Thursday: 09:00 - 17:00</br>Friday: 09:00 - 17:00</br>Saturday: 09:00 - 13:00</br>Sunday: Closed"
+    },
+    "drive_up":{
+      "hours":""
+    },
+    "meta":{
+      "license":{
+        "id":"copyright2016",
+        "name":"Copyright ENBDG 2016"
+      }
+    }
+  }]
+}</pre></code><h5>Description</h5><p><p>Returns information about branches for a single bank specified by BANK_ID including:</p><ul>  <li>Name</li>  <li>Address</li>  <li>Geo Location</li>  <li>License the data under this endpoint is released under</li></ul><p>Authentication is Optional</p></p></div>
+            <a id="2_1_0-getProduct" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank Product
+        </h3><h5>API path</h5><code>/banks/BANK_ID/products/PRODUCT_CODE</code><h5>Output</h5><code><pre>{
+  "code":"a1c5-FD1",
+  "name":"Generic Credit Card Product",
+  "bankId":{
+    "value":"psd201-bank-y--uk"
+  },
+  "category":"Credit Cards",
+  "family":"Credit Card",
+  "super_family":"Lending",
+  "more_info_url":"www.example.com"
+}</pre></code><h5>Description</h5><p><p>Returns information about the financial products offered by a bank specified by BANK_ID and PRODUCT_CODE including:</p><ul>  <li>Name</li>  <li>Code</li>  <li>Category</li>  <li>Family</li>  <li>Super Family</li>  <li>More info URL</li>  <li>Description</li>  <li>Terms and Conditions</li>  <li>License the data under this endpoint is released under Authentication is Optional</li></ul></p></div>
+            <a id="1_4_0-getProducts" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Bank Products
+        </h3><h5>API path</h5><code>/banks/BANK_ID/products</code><h5>Output</h5><code><pre>{
+  "products":[{
+    "code":"a1c5-FD1",
+    "name":"Generic Credit Card Product",
+    "category":"Credit Cards",
+    "family":"Credit Card",
+    "super_family":"Lending",
+    "more_info_url":"www.example.com",
+    "meta":{
+      "license":{
+        "id":"copyright2015",
+        "name":"Copyright"
+      }
+    }
+  },{
+    "code":"ef2e-DF4",
+    "name":"Generic MTA Upgrades Product",
+    "category":"MTA Upgrades",
+    "family":"MTA Upgrades",
+    "super_family":"MTA Upgrades",
+    "more_info_url":"www.example.com",
+    "meta":{
+      "license":{
+        "id":"copyright2015",
+        "name":"Copyright"
+      }
+    }
+  }]
+}</pre></code><h5>Description</h5><p><p>Returns information about the financial products offered by a bank specified by BANK_ID including:</p><ul>  <li>Name</li>  <li>Code</li>  <li>Category</li>  <li>Family</li>  <li>Super Family</li>  <li>More info URL</li>  <li>Description</li>  <li>Terms and Conditions</li>  <li>License the data under this endpoint is released under Authentication is Optional</li></ul></p></div>
+            <a id="1_2_1-allBanks" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Banks
+        </h3><h5>API path</h5><code>/banks</code><h5>Output</h5><code><pre>{
+  "banks":[{
+    "id":"psd201-bank-x--uk",
+    "short_name":"Bank X",
+    "full_name":"The Bank of X",
+    "logo":"https://static.openbankproject.com/images/sandbox/bank_x.png",
+    "website":"https://www.example.com"
+  },{
+    "id":"psd201-bank-y--uk",
+    "short_name":"Bank Y",
+    "full_name":"The Bank of Y",
+    "logo":"https://static.openbankproject.com/images/sandbox/bank_y.png",
+    "website":"https://www.example.com"
+  }]
+}</pre></code><h5>Description</h5><p><p>Get banks on this API instance Returns a list of banks supported on this server:</p><ul>  <li>ID used as parameter in URLs</li>  <li>Short and full name of bank</li>  <li>Logo URL</li>  <li>Website</li></ul></p></div>
+            <a id="2_1_0-getTransactionRequestTypesSupportedByBank" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get the Transaction Request Types supported by the bank
+        </h3><h5>API path</h5><code>/banks/BANK_ID/transaction-request-types</code><h5>Output</h5><code><pre>{
+  "transaction_request_types":[{
+    "transaction_request_type":"SANDBOX_TAN"
+  },{
+    "transaction_request_type":"SEPA"
+  }]
+}</pre></code><h5>Description</h5><p><p>Get the list of the Transaction Request Types supported by the bank.</p><p>Authentication is Optional</p></p></div>
+            <a id="2_0_0-addSocialMediaHandle" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Add Social Media Handle
+        </h3><h5>API path</h5><code>/banks/BANK_ID/customers/CUSTOMER_ID/social_media_handles</code><h5>Input</h5><code>{  "customer_number":"8762893876",  "type":"twitter",  "handle":"susan@example.com",  "date_added":"2013-01-21T23:08:00Z",  "date_activated":"2013-01-21T23:08:00Z"}</code><h5>Output</h5><code>{ }</code><h5>Description</h5><p><p>Add a social media handle for the customer specified by CUSTOMER_ID.</p></p></div>
+            <a id="2_0_0-getSocialMedia" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get social media handles for a customer
+        </h3><h5>API path</h5><code>/banks/BANK_ID/customers/CUSTOMER_ID/social_media_handles</code><h5>Output</h5><code><pre>{
+  "checks":[]
+}</pre></code><h5>Description</h5><p><p>Get social media handles for a customer.</p><p>Authentication is Mandatory</p></p></div>
+            <a id="1_2_1-addTagForViewOnTransaction" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Add a tag.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions/TRANSACTION_ID/metadata/tags</code><h5>Input</h5><code>{  "value":"holiday"}</code><h5>Output</h5><code><pre>{
+  "id":"48c6bea9-6926-4901-b0d6-0e9e99589f18",
+  "value":"holiday",
+  "date":"2017-03-21T07:21:59Z",
+  "user":{
+    "id":"robert.yuk.y@example.com",
+    "provider":"http://127.0.0.1:8080",
+    "display_name":"robert.yuk.y@example.com"
+  }
+}</pre></code><h5>Description</h5><p><p>Posts a tag about a transaction TRANSACTION_ID on a view VIEW_ID.</p><p>Authentication is Mandatory</p><p>Authentication is required as the tag is linked with the user.</p></p></div>
+            <a id="1_2_1-deleteTagForViewOnTransaction" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Delete a tag.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions/TRANSACTION_ID/metadata/tags/TAG_ID</code><h5>Output</h5><code><pre>true</pre></code><h5>Description</h5><p><p>Deletes the tag TAG_ID about the transaction TRANSACTION_ID made on view. </p><p>Authentication via OAuth is required. The user must either have owner privileges for this account, or must be the user that posted the tag.</p></p></div>
+            <a id="1_2_1-getTagsForViewOnTransaction" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get tags.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions/TRANSACTION_ID/metadata/tags</code><h5>Output</h5><code><pre>{
+  "tags":[{
+    "id":"447b0ae1-f6e9-4c05-82cd-a4693f10c1cc",
+    "value":"holiday",
+    "date":"2017-03-21T07:24:06Z",
+    "user":{
+      "id":"robert.yuk.y@example.com",
+      "provider":"http://127.0.0.1:8080",
+      "display_name":"robert.yuk.y@example.com"
+    }
+  }]
+}</pre></code><h5>Description</h5><p><p>Returns the transaction TRANSACTION_ID tags made on a view (VIEW_ID).</p><p>Authentication via OAuth is required if the view is not public.</p></p></div>
+            <a id="2_0_0-getCurrentUser" class="anchor">&nbsp;</a><div class="bordered"><h3>
+                Get User (Current)
+        </h3><h5>API path</h5><code>/users/current</code><h5>Output</h5><code><pre>{
+  "user_id":"c3e364be-a4ad-483e-9903-10be53e3f0bc",
+  "email":"robert.yuk.y@example.com",
+  "provider_id":"robert.yuk.y@example.com",
+  "provider":"http://127.0.0.1:8080",
+  "username":"robert.yuk.y@example.com"
+}</pre></code><h5>Description</h5><p><p>Get the logged in user. Login is required.</p></div>
+            <a id="2_0_0-getUser" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Users by Email Address
+        </h3><h5>API path</h5><code>/users/USER_EMAIL</code><h5>Output</h5><code><pre>{
+  "users":[{
+    "user_id":"c3e364be-a4ad-483e-9903-10be53e3f0bc",
+    "email":"robert.yuk.y@example.com",
+    "provider_id":"robert.yuk.y@example.com",
+    "provider":"http://127.0.0.1:8080",
+    "username":"robert.yuk.y@example.com"
+  }]
+}</pre></code><h5>Description</h5><p><p>Get users by email address</p><p>Login is required. CanGetAnyUser entitlement is required,</p></p></div>
+            <a id="2_0_0-getCustomers" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get all customers for logged in user
+        </h3><h5>API path</h5><code>/users/current/customers</code><h5>Output</h5><code><pre>{
+  "customers":[{
+    "customer_id":"1",
+    "customer_number":"+48343231141",
+    "legal_name":"Dont know",
+    "mobile_phone_number":"+48738283283",
+    "email":"robert.yuk.y@example.com",
+    "face_image":{
+      "url":null,
+      "date":null
+    },
+    "date_of_birth":null,
+    "relationship_status":"Hope to be divorced",
+    "dependants":0,
+    "dob_of_dependants":[null],
+    "highest_education_attained":"Only java script",
+    "employment_status":"No job",
+    "kyc_status":false,
+    "last_ok_date":null
+  }]
+}</pre></code><h5>Description</h5><p><p>Information about the currently authenticated user.</p><p>Authentication via OAuth is required.</p></p></div>
+            <a id="1_2_1-getCounterpartiesForBankAccount" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get counterparties of one account.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/other_accounts</code><h5>Output</h5><code><pre>{
+  "other_accounts":[{
+    "id":"e2ad2861-54ae-4c49-8fe7-ca489adc82fc",
+    "holder":{
+      "name":"ALIAS_0BFC3A",
+      "is_alias":true
+    },
+    "number":"13759969699",
+    "kind":"CURRENT PLUS",
+    "IBAN":"BA1212345123451375996969977",
+    "swift_bic":null,
+    "bank":{
+      "national_identifier":null,
+      "name":"The Bank of X"
+    },
+    "metadata":{
+      "public_alias":null,
+      "private_alias":null,
+      "more_info":null,
+      "URL":null,
+      "image_URL":null,
+      "open_corporates_URL":null,
+      "corporate_location":null,
+      "physical_location":null
+    }
+  },{
+    "id":"0a989fca-202c-4c74-a0ab-b0bdd74c38e9",
+    "holder":{
+      "name":"ALIAS_4B70CC",
+      "is_alias":true
+    },
+    "number":null,
+    "kind":null,
+    "IBAN":null,
+    "swift_bic":null,
+    "bank":{
+      "national_identifier":null,
+      "name":null
+    },
+    "metadata":{
+      "public_alias":null,
+      "private_alias":null,
+      "more_info":null,
+      "URL":null,
+      "image_URL":null,
+      "open_corporates_URL":null,
+      "corporate_location":null,
+      "physical_location":null
+    }
+  }]
+}</pre></code><h5>Description</h5><p><p>Returns data about all the other bank accounts that have shared at least one transaction with the ACCOUNT_ID at BANK_ID. Authentication is Optional Authentication is required if the view VIEW_ID is not public.</p></p></div>
+            <a id="1_2_1-getCounterpartyForTransaction" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Get Counterparty of Transaction
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transactions/TRANSACTION_ID/other_account</code><h5>Output</h5><code><pre>{
+  "id":"e2ad2861-54ae-4c49-8fe7-ca489adc82fc",
+  "holder":{
+    "name":"ALIAS_0BFC3A",
+    "is_alias":true
+  },
+  "number":"13759969699",
+  "kind":"CURRENT PLUS",
+  "IBAN":"BA1212345123451375996969977",
+  "swift_bic":null,
+  "bank":{
+    "national_identifier":null,
+    "name":"The Bank of X"
+  },
+  "metadata":{
+    "public_alias":null,
+    "private_alias":null,
+    "more_info":null,
+    "URL":null,
+    "image_URL":null,
+    "open_corporates_URL":null,
+    "corporate_location":null,
+    "physical_location":null
+  }
+}</pre></code><h5>Description</h5><p><p>Get other account of a transaction. Returns details of the other party involved in the transaction, moderated by the view (VIEW_ID).</p><p>Authentication via OAuth is required if the view is not public.</p></p></div>
+            <a id="2_0_0-answerTransactionRequestChallenge" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Answer Transaction Request Challenge.
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transaction-request-types/TRANSACTION_REQUEST_TYPE/transaction-requests/TRANSACTION_REQUEST_ID/challenge</code><h5>Input</h5><code>{"token":"123345"}</code><h5>Output</h5><code><pre>{
+    "id": "f350d496-f28f-43a9-a801-daef106ec8fa",
+    "type": "SANDBOX_TAN",
+    "from": {
+        "bank_id": "psd201-bank-y--uk",
+        "account_id": "05237266-b334-4704-a087-5b460a2ecf04"
+    },
+    "body": {
+        "to": {
+            "bank_id": "psd201-bank-x--uk",
+            "account_id": "05237266-b334-4704-a087-5b460a2ecf04"
+        },
+        "value": {
+            "currency": "GBP",
+            "amount": "1756"
+        },
+        "description": ""
+    },
+    "transaction_ids": "45bb2ed9-70d1-403b-a1d3-0c9dba86db8b",
+    "status": "COMPLETED",
+    "start_date": "2017-03-20T23:00:00Z",
+    "end_date": "2017-03-20T23:00:00Z",
+    "need_challenge": "true",
+    "charge": {
+        "summary": "",
+        "value": {
+            "currency": "",
+            "amount": ""
+        }
+    }
+}</pre></code><h5>Description</h5><p><p>Enter the token from SMSAuth application for proper transaction request.</p></p></div>
+            <a id="2_1_0-createTransactionRequestSepa" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Create Transaction Request (SEPA)
+        </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transaction-request-types/SEPA/transaction-requests</code><h5>Input</h5><code>{  "value":{    "currency":"GBP",    "amount":"12.50"  },  "to":{    "iban":"BA1212345123451375996969977"  },  "description":"This is a SEPA Transaction Request",  "charge_policy":"SHARED"}</code><h5>Output</h5><code><pre>{
+    "id": "427418f6-e25c-48f6-8c65-a331405d9200",
+    "type": "SEPA",
+    "from": {
+        "bank_id": "psd201-bank-y--uk",
+        "account_id": "05237266-b334-4704-a087-5b460a2ecf04"
+    },
+    "details": "",
+    "transaction_ids": "898e6d57-60ec-4e09-9dd0-eeb6961db268",
+    "status": "COMPLETED",
+    "start_date": "2017-03-21T08:17:32Z",
+    "end_date": "2017-03-21T08:17:32Z",
+    "need_challenge": "false",
+    "charge": {
+        "summary": "",
+        "value": {
+            "currency": "",
+            "amount": ""
+        }
+    }
+}</pre></code><h5>Description</h5><p><p>Initiate a Payment via creating a Transaction Request.</p><p>In OBP, a transaction request may or may not result in a transaction. However, a transaction only has one possible state: completed.</p><p>A Transaction Request can have one of several states.</p><p>Transactions are modeled on items in a bank statement that represent the movement of money.</p><p>Transaction Requests are requests to move money which may or may not succeeed and thus result in a Transaction.</p><p>A Transaction Request might create a security challenge that needs to be answered before the Transaction Request proceeds.</p><p>Transaction Requests contain charge information giving the client the opportunity to proceed or not (as long as the challenge level is appropriate).</p><p>Transaction Requests can have one of several Transaction Request Types which expect different bodies. The escaped body is returned in the details key of the GET response. This provides some commonality and one URL for many different payment or transfer types with enough flexibility to validate them differently.</p><p>The payer is set in the URL. Money comes out of the BANK_ID and ACCOUNT_ID specified in the URL.</p><p>The payee is set in the request body. Money goes into the BANK_ID and ACCOUNT_ID specified in the request body.</p><p>If transaction request type is SEPA, if the amount is less than 50 (any currency), the transaction request will create a transaction without a challenge, else the Transaction Request will be set to INITIALISED and a challenge will need to be answered.</p><p>If a challenge is created you must answer it using Answer Transaction Request Challenge before the Transaction is created.</p><p>You can transfer between different currency accounts. The currency in body must match the sending account.</p><p>The following static FX rates are available in sandbox mode:</p><p>Transaction Requests satisfy PSD2 requirements thus:</p><p>1) A transaction can be initiated by a third party application.</p><p>2) The customer is informed of the charge that will incurred.</p><p>3) The call supports delegated authentication (OAuth)</p><p>There is further documentation <a href="https://github.com/OpenBankProject/OBP-API/wiki/Transaction-Requests">here</a></p><p>Authentication is Mandatory</p><p>Special instructions for SEPA:</p><p>When using a SEPA Transaction Request, you specify the IBAN of a Counterparty in the body of the request. The routing details (IBAN) of the counterparty will be forwarded to the core banking system for the transfer.</p></p></div>
+            <a id="2_1_0-createTransactionRequest" class="anchor">&nbsp;</a><div class="bordered"><h3>
+            Create Transaction Request.
+            </h3><h5>API path</h5><code>/banks/BANK_ID/accounts/ACCOUNT_ID/VIEW_ID/transaction-request-types/TRANSACTION_REQUEST_TYPE/transaction-requests</code><h5>Input</h5><code>{  "to":{    "bank_id":"BANK_ID",    "account_id":"ACCOUNT_ID"  },  "value":{    "currency":"EUR",    "amount":"100.53"  },  "description":"A description for the transaction to be created"}</code><h5>Output</h5><code><pre>{
+    "id": "93ae6cb0-2c78-41e1-aeaf-f3a3a8ca8f8c",
+    "type": "SANDBOX_TAN",
+    "from": {
+        "bank_id": "psd201-bank-y--uk",
+        "account_id": "05237266-b334-4704-a087-5b460a2ecf04"
+    },
+    "details": "",
+    "transaction_ids": "6bf6070f-0b3c-4d07-945d-ae2d297fd97c",
+    "status": "COMPLETED",
+    "start_date": "2017-03-21T07:51:00Z",
+    "end_date": "2017-03-21T07:51:00Z",
+    "need_challenge": "false",
+    "charge": {
+        "summary": "",
+        "value": {
+            "currency": "",
+            "amount": ""
+        }
+    }
+}</pre></code><h5>Description</h5><p><p>Initiate a Payment via a Transaction Request.</p><p>This is the preferred method to create a payment and supersedes makePayment in 1.2.1.</p><p>PSD2 Context: Third party access access to payments is a core tenent of PSD2.</p><p>This call satisfies that requirement from several perspectives:</p><p>1) A transaction can be initiated by a third party application.</p><p>2) The customer is informed of the charge that will incurred.</p><p>3) The call uses delegated authentication (OAuth)</p><p>If transaction request type is SANDBOX_TAN, if the amount is less than 50 (any currency), the transaction request will create a transaction without a challenge, else a challenge will need to be answered.</p><p>You can transfer between different currency accounts. The currency in body must match the sending account.</p><p>Currently TRANSACTION_REQUEST_TYPE must be set to SANDBOX_TAN</p><p>The following static FX rates are available:</p><p><code>{  "GBP":{  "AED":5.22,  "INR":94.66,  "JPY":154.47,  "USD":1.42,  "EUR":1.26  },  "AED":{  "GBP":0.19,  "INR":18.15,  "JPY":29.61,  "USD":0.27,  "EUR":0.24  },  "INR":{  "GBP":0.011,  "AED":0.055,  "JPY":1.63,  "USD":0.015,  "EUR":0.013  },  "JPY":{  "GBP":0.0065,  "AED":0.034,  "INR":0.61,  "USD":0.0092,  "EUR":0.0081  },  "USD":{  "GBP":0.7,  "AED":3.67,  "INR":66.65,  "JPY":108.77,  "EUR":0.89  },  "EUR":{  "GBP":0.79,  "AED":4.14,  "INR":75.2,  "JPY":122.71,  "USD":1.13  } }</code></p><p>The payer is set in the URL. Money comes out of the BANK_ID and ACCOUNT_ID specified in the URL</p><p>The payee is set in the request body. Money goes into the BANK_ID and ACCOUNT_IDO specified in the request body.</p><p>Authentication is Mandatory</p></p></div>
+            </div>
+            <!-- /api list -->
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer>
+        &copy; 24H-CodING is part of ING<br>
+        Open Bank Project is &copy; 2011-2016 TESOBE and distributed under the AGPL and commercial licenses.
+    </footer>
+</div>
+<script>
+    window.onresize = function(event) {
+        var h = window.innerHeight - 148;
+        document.getElementById("menu").style.height = (h)+"px";
+        document.getElementById("scroll").style.height = (h-265)+"px";
+    };
+    window.onresize();
+    if(window.location.hash == '#hackathon') {
+        document.body.className = 'hackathon';
+    }
+
+    window.onscroll = function () {
+        if (window.pageYOffset > 50) {
+            document.getElementById('back-to-top').style.display = "block";
+        } else {
+            document.getElementById('back-to-top').style.display = "none";
+        }
+    };
+
+
+</script>
+</body>
+</html>

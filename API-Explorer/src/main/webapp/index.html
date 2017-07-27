@@ -1,0 +1,205 @@
+<div data-lift="surround?with=default&at=content">
+
+    <div data-lift="ApiExplorer.showResources">
+
+        <div class="api_list">
+            <ul>
+                <li class="api_list_item">
+                    <a class="api_list_item_link" href="./#anchor">API call title</a>
+                </li>
+            </ul>
+        </div>
+
+
+    <section class="breadcrumb-section">
+        <div class="container">
+            <div class="breadcrumbs">
+
+                <ul class="breadcrumbs__row">
+                    <li class="breadcrumbs__list">
+                        <a id="api_home_link" href="simon says" class="breadcrumbs__link">API Home</a>
+                    </li>
+
+
+                    Versions:
+
+                    <li class="versions breadcrumbs__list">
+                        <a class="version" href="./?version=1.2.1">version</a>
+                    </li>
+
+
+                </ul>
+
+                <div class="version_path">
+                    API Root: <a name="version_path" class="version" href="version path">version path</a>
+                </div>
+
+                <div style="clear: both"></div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+        <section class="api-info-section">
+            <div class="container">
+                <div class="info-box">
+                    <h2 class="info-box__headline">Use the API in the context of your login</h2>
+                </div>
+
+                <div class="info-box">
+                    <h3 class="info-box__about_selected">This version...</h3>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+        <section class="option-section">
+            <div class="container">
+                <div class="option-box">
+                    <h4 class="option-box__headline">Bank</h4>
+                    <!--
+                    <div class="count-box">
+                        <span class="count-box__number">0</span>
+                    </div>
+                    -->
+                    <select id="bank_selector" name="Bank" class="option-box__select">
+                        <option value="Choose from..." class="option-box__option">Choose from...</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                    </select>
+                </div>
+                <div class="option-box">
+                    <h4 class="option-box__headline">Accounts</h4>
+                    <!--
+                    <div class="count-box">
+                        <span class="count-box__number">0</span>
+                    </div>
+                    -->
+                    <select id="account_selector" name="Accounts" class="option-box__select">
+                        <option value="Choose from..." class="option-box__option">Choose from...</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                    </select>
+                </div>
+                <div class="option-box" name="views_box">
+                    <h4 class="option-box__headline">Views</h4>
+                    <!--
+                    <div class="count-box">
+                        <span class="count-box__number">0</span>
+                    </div>
+                    -->
+                    <select id="view_selector" name="Views" class="option-box__select">
+                        <option value="Choose from..." class="option-box__option">Choose from...</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                    </select>
+                </div>
+                <div class="option-box">
+                    <h4 class="option-box__headline">Counterparties</h4>
+                    <!--
+                    <div class="count-box">
+                        <span class="count-box__number">0</span>
+                    </div>
+                    -->
+                    <select id="counterparty_selector" name="Counterparties" class="option-box__select">
+                        <option value="Choose from..." class="option-box__option">Choose from...</option>
+                        <option value="Choose from..." class="option-box__option">placeholder</option>
+                        <option value="Choose from..." class="option-box__option">placeholder</option>
+                    </select>
+                </div>
+                <div class="option-box">
+                    <h4 class="option-box__headline">Transactions</h4>
+                    <!--
+                    <div class="count-box">
+                        <span class="count-box__number">0</span>
+                    </div>
+                    -->
+                    <select id="transaction_selector" name="Transactions" class="option-box__select">
+                        <option value="Choose from..." class="option-box__option">Choose from...</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                        <option value="Choose from..." class="option-box__option">Placeholder</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+    <div class="resource">
+
+        <section class="content-section">
+            <div class="container">
+                <div class="content-box bg--white">
+                    <a class="end-point-anchor" href="./#anchor">
+                        <h2 id="anchor" class="content-box__headline">The root of the API</h2>
+                    </a>
+                    <div class="content-box__text-box">
+                        <ul class="content-box__row">
+                            <li class="content-box__link">Returns information about:</li>
+                            <li class="content-box__link">API version</li>
+                            <li class="content-box__link">Hosted by information</li>
+                            <li class="content-box__link">Git Commit</li>
+                        </ul>
+                    </div>
+                    <div class="content-box__input-box">
+                        <form class="lift:form.ajax" id="form1">
+                            <!-- Attributes for these fields are replaced -->
+                            <input type="hidden" name="resource_id_input">
+                            <input type="hidden" name="request_verb_input" placeholder="GET, POST, PUT etc.">
+                            <!-- The url_to_call is populated at render (but it can be edited manually) -->
+                            <input type="text" name="request_url_input" class="default-input" placeholder="OBP URL to call">
+
+                            <div name="example_request_body" style="display: block;">
+                                <input name="example_request_body_input" class="default-input" placeholder="JSON body to POST or PUT">
+                                <!-- TODO get this working: <textarea name="request_body_input" form="form1">Enter text here...</textarea>  -->
+                            </div>
+
+
+
+
+                            <button name="call_button" class="default-button">POST</button>
+                       </form>
+                    </div>
+                    <div name="result_box" class="content-box__info-box" style="display: none;">
+                        <pre>
+                            <code>
+                                <div name="result"></div>
+                                <!-- TODO: This should hide the result
+                                <img src="./media/images/close-icon.png" alt="Close icon" class="content-box__close-icon">
+                                -->
+	                    </code>
+                        </pre>
+		            </div>
+
+                </div>
+                <div class="content-box__available-since"></div>
+            </div>
+        </section>
+
+
+    </div>
+        <div class="docs-as-json">
+            <a class="content-box__swagger_etc" name="resource_docs_path" href="" >Resource Docs JSON</a>
+            <a class="content-box__swagger_etc" name="swagger_path" href="" class="footer-link-box__link">Swagger JSON (experimental)</a>
+        </div>
+</div>
+
+</div>

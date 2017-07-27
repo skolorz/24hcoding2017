@@ -1,0 +1,21 @@
+sudo: required
+
+language: java
+
+services:
+  - docker
+      
+install: true
+
+before_script: true
+
+script:
+  - chmod +x travis/build.sh
+  - travis/build.sh
+
+after_success:
+  - chmod +x travis/rancher.sh
+  - travis/rancher.sh
+
+notifications:
+  slack: inghackathon2017:2LMqEtgvoZB2hSjhes2I5Uup

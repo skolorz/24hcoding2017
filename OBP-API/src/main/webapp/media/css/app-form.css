@@ -1,0 +1,177 @@
+@font-face{font-family:"ING Me Custom Font";src:url("../INGMeWeb-Regular.eot");src:url("../INGMeWeb-Regular.woff") format("woff");font-weight:normal;font-style:normal}
+@font-face{font-family:"ING Me Custom Font";src:url("../INGMeWeb-Bold.eot");src:url("../INGMeWeb-Bold.woff") format("woff");font-weight:bold;font-style:normal}
+
+/* ---- COMMON ------------------------------------------------------------------------------------------------------ */
+#manualRedirect, #verifierBloc { text-align:center; }
+#copy { display:none; }
+h2, h4 { margin:0; padding:0; }
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; }
+.form-group .glyphicon { display:none; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+.login-error, .error-msg { text-align:center; font-size:17px; }
+
+#authorizeSection.terms #bank_logo:not(.terms), #authorizeSection.terms #appPermision, #authorizeSection.terms #appName { display:none; }
+#conditions, #sms_token { clear:both; }
+#conditions { text-align:justify; padding:20px; font-size:12px; -webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px; -webkit-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75); -moz-box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75); box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,0.75); }
+#sms_token { text-align:right; padding:0; }
+#sms_token .form-group { display:inline-block; margin: 0; padding: 0 0 0 10px; vertical-align: middle; }
+strong.b { display:block; font-size:14px; margin-bottom:20px;}
+
+/* ---- ING --------------------------------------------------------------------------------------------------------- */
+body.ing { font-family: "ING Me Custom Font",Arial,sans-serif; background:url('../images/bank_ing_bg.jpg') no-repeat center center fixed; color:#666; background-size:cover; }
+body.ing #authorizeSection { background-color:rgba(255,255,255,0.7); padding:37px 110px; text-align:center; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; width: 50%; margin-left: auto; margin-right: auto; margin-bottom:30px;}
+body.ing #copy { color:#fff; display:block; }
+body.ing #copy .col-xs-6 { position:fixed; bottom:10px; z-index:0; }
+body.ing #copy .col-xs-6.text-left { left:30px; }
+body.ing #copy .col-xs-6.text-right{ right:30px; }
+body.ing #bank_logo { width:152px; height:50px; background:url('../images/bank_ing_logo.png') no-repeat; background-size:contain; margin:0 auto; }
+body.ing .form-group { margin-bottom:8px; }
+body.ing h2 { font-weight: normal; font-size: 26px; color: #FF6200; }
+body.ing h4 { font-size:14px; margin-top:5px; }
+body.ing #bank_logo { margin-bottom: 10px; }
+body.ing #formSection { margin-top:25px; }
+body.ing #formSection select, body.ing #formSection input:not(.btn) { color:#aaa; -webkit-text-fill-color: #aaa !important; }
+body.ing #formSection input:focus, body.ing #formSection select:focus { border-color: #FF6200; }
+body.ing #formSection .btn { border-color: #FF6200; background-color: #FF6200; background-image: none; color:#fff; }
+
+body.ing #authorizeSection.terms { padding:13px 20px; width:85%; margin-top:30px; }
+body.ing #conditions { background-color: rgba(255,255,255,0.8); }
+body.ing #bank_logo.terms { float:right; }
+body.ing #authorizeSection.terms h4 { font-size:28px; color: #FF6200; flat:left; text-align:left; padding-top:12px; }
+body.ing #termsSection input:not(.btn) { color:#aaa; -webkit-text-fill-color: #aaa !important; }
+body.ing #termsSection input:focus { border-color: #FF6200; }
+body.ing #termsSection .btn { border-color: #FF6200; background-color: #FF6200; background-image: none; color:#fff; width:120px; }
+
+@media only screen and (max-width : 1200px) {
+    body.ing #authorizeSection { width:60%; }
+}
+@media only screen and (max-width : 992px) {
+    body.ing #authorizeSection { width:70%; padding: 37px 80px; }
+    body.ing #copy { font-size:10px; }
+    body.ing #copy .col-xs-6.text-left { left:10px; }
+    body.ing #copy .col-xs-6.text-right{ right:10px; }
+}
+@media only screen and (max-width : 768px) {
+    body.ing #authorizeSection { width:80%; padding: 37px 50px; }
+    body.ing #authorizeSection.terms h4 { font-size:17px; }
+}
+@media only screen and (max-width : 480px) {
+    body.ing { background:none; }
+    body.ing #authorizeSection { width:100%; padding:10px; }
+    body.ing #copy { color:#FF6200; }
+    body.ing #authorizeSection.terms h4 { float: none; text-align: center; margin: 0; padding: 5px 0 10px 0; }
+    body.ing #bank_logo.terms { float: none; margin: 0 auto; }
+    body.ing #authorizeSection.terms { width:100%; }
+    #sms_token { text-align:center; }
+    #conditions { box-shadow: none; border: #aaa 1px solid; }
+}
+@media only screen and (max-width : 320px) {
+    body.ing #authorizeSection { width:100%; }
+}
+
+/* ---- GOTHAM ------------------------------------------------------------------------------------------------------ */
+
+body.gotham { font-family: 'Cinzel', serif; background:url('../images/bank_gotham_bg.jpg') no-repeat center center fixed; color:#fff; background-size:cover; }
+body.gotham #authorizeSection { text-align:center; width: 65%; margin-left: auto; margin-right: auto; padding:20px; }
+body.gotham #bank_logo { width:323px; height:74px; background:url('../images/bank_gotham_logo.png') no-repeat; background-size:contain; margin:0 auto 40px auto; }
+body.gotham input:not(.btn), body.gotham select { height:50px; border: none; background: none; background-image: none !important; background-color: rgba(255,255,255,0.1) !important; color: #aaa !important; }
+body.gotham input:not(.btn) { padding-left:53px; }
+body.gotham .btn { width: auto; float: right; padding-left: 40px; padding-right: 40px; background-color: #710f0f; background-image: none; border-color: #380808; font-size: 15px;}
+body.gotham #formSection { margin-top:60px; }
+body.gotham h2 { margin-top: 25px; font-weight: bold; letter-spacing: -1px; }
+body.gotham h4 { font-weight: normal; font-size: 16px; margin-top: 5px;}
+body.gotham .form-group .glyphicon { display: inline-block; color: #fff; position: relative; z-index: 2; float: left; font-size: 24px; margin: -38px 0 0 14px; }
+body.gotham #formSection input:focus, body.gotham #formSection select:focus { border-color: #710f0f; }
+
+body.gotham #authorizeSection.terms { padding:13px 20px; width:85%; margin-top:30px; }
+body.gotham #conditions { background-color: rgba(0,0,0,0.8); font-size:15px;}
+body.gotham #bank_logo.terms { float:right; }
+body.gotham #authorizeSection.terms h4 { font-size:28px; color: #fff; flat:left; text-align:left; padding-top:12px; }
+body.gotham #termsSection input { margin:0; padding:7px; height:auto; }
+body.gotham #termsSection input:not(.btn) { color:#aaa; -webkit-text-fill-color: #aaa !important; padding:8px; height:auto; }
+body.gotham #termsSection input:focus { border-color: #FF6200; }
+body.gotham #termsSection .btn { border-color: #710f0f; background-color: #710f0f; background-image: none; color:#fff; width:120px; }
+body.gotham #termsSection .form-group { margin-right:10px; }
+
+@media only screen and (max-width : 1200px) {
+    body.gotham #authorizeSection { width:65%; }
+}
+@media only screen and (max-width : 992px) {
+    body.gotham #authorizeSection { width:70%; padding: 37px 80px; }
+    body.gotham #authorizeSection.terms { width:100%; }
+}
+@media only screen and (max-width : 768px) {
+    body.gotham #authorizeSection { width:80%; padding: 37px 10px; }
+    body.gotham #authorizeSection.terms h4 { float: none; text-align: center; margin: 0; padding: 5px 0 10px 0; font-size:17px; }
+    body.gotham #bank_logo.terms { float: none; margin: 0 auto; }
+}
+@media only screen and (max-width : 480px) {
+    body.gotham { background:none; background-color:#333; }
+    body.gotham #authorizeSection { width:100%; padding:10px; }
+    body.gotham #sms_token { text-align:center; }
+    body.gotham #conditions { box-shadow: none; border: #aaa 1px solid; }
+    body.gotham #termsSection .btn { display: block; float: none; margin: 5px auto; }
+}
+@media only screen and (max-width : 320px) {
+    body.gotham #authorizeSection { width:100%; }
+}
+
+/* ---- GRINGOTTS --------------------------------------------------------------------------------------------------- */
+
+body.gringotts { font-family: 'Smythe', cursive; background:url('../images/bank_gringotts_bg.jpg') no-repeat center center fixed; color:#ff0; background-size:cover; }
+body.gringotts #bank_logo { width:154px; height:92px; background:url('../images/bank_gringotts_logo.png') no-repeat; background-size:contain; margin-right:70px; }
+body.gringotts .btn { background: none; border: none; box-shadow: none; color: #ff0; text-shadow: #000 5px 5px 9px; font-size: 53px; }
+body.gringotts #formSection { background-color: #701717; padding: 30px; text-align: center; width: 768px; text-align:center; margin: 30px auto 0 auto; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; }
+body.gringotts #formSection form, body.gringotts #bank_logo { display:inline-block; vertical-align:middle; }
+body.gringotts #formSection form { width:400px; }
+body.gringotts h2, body.gringotts h4 { text-align:center; text-shadow: #000 5px 5px 9px; }
+body.gringotts h4 { font-size: 22px; }
+body.gringotts h2 { font-size: 34px; }
+body.gringotts input:not(.btn), body.gringotts select { border-color: #600; background-color:#5f1212; font-size:18px; color:#ff0 !important; height:45px; -webkit-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75); -moz-box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75); box-shadow: inset 0px 0px 6px 1px rgba(0,0,0,0.75); }
+body.gringotts .form-group { margin:10px 0; }
+
+body.gringotts #authorizeSection.terms { padding:13px 20px; width:100%; margin-top:30px; margin-left:0px; }
+body.gringotts #conditions { background-color: rgba(255,100,100,0.2); font-size:22px;}
+body.gringotts strong.b { font-size:22px; border-bottom:#700 1px solid; }
+body.gringotts #bank_logo.terms { float:right; margin:0 0 10px 0; }
+body.gringotts #authorizeSection.terms h4 { font-size:38px; color: #ff0; flat:left; text-align:left; padding-top:42px; }
+body.gringotts #termsSection input { margin:0; padding:7px; height:auto; }
+body.gringotts #termsSection input:not(.btn) { color:#ff0; -webkit-text-fill-color: #ff0 !important; padding:12px; height:auto; }
+body.gringotts #termsSection input:focus { border-color: #FF6200; }
+body.gringotts #termsSection .btn { border-color: #710f0f; background-color: #710f0f; background-image: none; color:#ff0; font-size:25px; padding-left:20px; padding-right:20px; }
+body.gringotts #termsSection .form-group { margin-right:10px; }
+body.gringotts #sms_token { font-size:22px; padding-bottom:70px; }
+
+@media only screen and (max-width : 1200px) {
+    body.gringotts #authorizeSection { width:100%; }
+    body.gringotts #formSection { width: 768px; }
+}
+@media only screen and (max-width : 992px) {
+    body.gringotts #authorizeSection { width:100%; }
+    body.gringotts #formSection { width: 468px; }
+    body.gringotts #bank_logo { margin:0; }
+    body.gringotts #authorizeSection.terms { width:100%; }
+}
+@media only screen and (max-width : 768px) {
+    body.gringotts #authorizeSection { width:100%; }
+    body.gringotts #formSection { width: 368px; }
+    body.gringotts #formSection form { width:100%; }
+    body.gringotts #authorizeSection.terms h4 { float: none; text-align: center; margin: 0; padding: 5px 0 10px 0; font-size:17px; }
+    body.gringotts #bank_logo.terms { float: none; margin: 0 auto; }
+}
+@media only screen and (max-width : 480px) {
+    body.gringotts #authorizeSection { width:100%; }
+    body.gringotts #formSection { width: 90%; }
+    body.gringotts #sms_token { text-align:center; }
+    body.gringotts #conditions { box-shadow: none; border: #000 1px solid; }
+    body.gringotts #termsSection .btn { display: block; float: none; margin: 5px auto; }
+}
+@media only screen and (max-width : 320px) {
+    body.gringotts #authorizeSection { width:100%; }
+    body.gringotts #formSection { width: 90%; }
+}

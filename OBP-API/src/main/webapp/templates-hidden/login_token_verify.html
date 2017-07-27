@@ -1,0 +1,80 @@
+<div class="text-center form-box">
+    <style type="text/css">
+        body.ing #copy {
+            display: none;
+        }
+    </style>
+    <div class="lift:OAuthAuthorisation.authorization">
+        <form data-lift="TokenVerifier?form=post" id="termsSection">
+
+            <div id="bank_logo" class="terms"></div>
+            <h4>Terms &amp; conditions</h4>
+            <p id="conditions">
+                <strong class="b">General</strong>
+                This application is intended for general information purposes. This application does provide basic
+                information concerning individual banking products, insurance products or asset management products or
+                related services. However none of the information at this site should be interpreted as an offer to sell
+                securities or as investment advice of any kind. Queries concerning these topics should be addressed to
+                the individual business units and/or companies of ING Groep N.V. ('ING Group').<br><br>
+                By accessing this application and the materials and information contained herein, you acknowledge that
+                you have read, understand, accept and agree to be bound by the terms and conditions that follow.<br><br>
+                <strong class="b">Linked Internet Sites</strong>
+                ING Group comprises a broad spectrum of companies ('ING companies'), many of them operating under their
+                own brand names. Almost every ING company, business unit or product group, has its own application on
+                the internet where it offers information about its products and services. Reference is made to those
+                applications for further details and hyperlinks have been provided from this application to those ING
+                companies, business units and product groups, if available.<br><br>
+                Users are advised that information on hyperlinked or referred-to applications is neither investigated
+                nor analysed by ING Group. No warranty or representation, express or implied, is given as to the
+                accuracy or completeness of that information. In no event will ING Group, nor any of its directors,
+                employees or advisors accept any liability with regard to the information contained in the individual
+                ING companies', business unit or product group's applications or any other hyperlinked or referred-to
+                applications.<br><br>
+                ING Group is not responsible for the content of any other internet sites linked to a site. A link to
+                another site is meant for convenience only and does not imply that ING Group endorses the site or any
+                products or services that it describes. Your access to and use of any other internet sites linked to or
+                from this site is at your own risk and ING Group assumes no obligation or liability in connection
+                therewith. ING Group reserves the right to terminate any link or linking program at any time.<br><br>
+                By accessing this site, you also agree to abide by the proprietary guidelines set forth at any
+                application accessed or linked to through this site.<br><br>
+                <strong class="b">Copyright</strong>
+                The site content is protected by copyright. All rights in the pages, site content and arrangement are
+                owned by ING Group or its licensors. Users are prohibited from modifying, copying, distributing,
+                transmitting, displaying, publishing, selling, licensing, creating derivative works or using any site
+                content for any other purposes than that of this site, i.e. providing information about ING
+                Group.<br><br>
+                <strong class="b">Trademarks, Service Marks and Logos</strong>
+                The trademarks, service marks and logos ('marks') appearing on this site and/or any other ING companies'
+                applications are the property of those ING companies. Users are prohibited from using any of the marks
+                without the prior written consent of the relevant ING company.<br><br>
+                <strong class="b">No Liability</strong>
+                While ING Group and ING companies use reasonable efforts to include accurate and up-to-date information
+                on this application, errors or omissions sometimes occur. ING Group and ING companies expressly disclaim
+                any liability, whether in contract, tort, strict liability or otherwise, for any direct, indirect,
+                incidental, consequential, punitive or special damages arising out of or in any way connected with your
+                access to or use of this site, and/or any other ING companies' applications whether or not ING Group
+                and/or ING companies were aware of the possibility of such damages.<br><br>
+                All information on this site, including but not limited to graphics, text and links to other sites, is
+                provided 'as is' and is subject to change without prior notice. Such information is provided, to the
+                fullest extent permissible pursuant to applicable law, without warranty of any kind express or implied,
+                including but not limited to implied warranties of merchantability, fitness for a particular purpose,
+                non-infringement and freedom from computer viruses or similar disabling devices.<br><br>
+                ING Group does not warrant the adequacy, accuracy or completeness of any information on this site and
+                expressly disclaim any liability for errors or omissions therein. Users are responsible for evaluating
+                the accuracy, completeness or usefulness of any information or other content available on this site.<br><br>
+                ING Group does not warrant the error free and uninterrupted service of this application.
+            </p>
+            <div id="sms_token">
+                Please provide token and accept APP
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="token" name="login_token" tabindex=2 size="6"/>
+                </div>
+                <input class="btn btn-primary" type="submit" id="submit" value="Accept"/>
+            </div>
+            <input type="hidden" name="oauth_token" id="oauth_token"/>
+            <input type="hidden" name="token_id" id="token_id"/>
+            <input type="hidden" name="bankTemplate" id="bankTemplate"/>
+
+        </form>
+    </div>
+</div>
