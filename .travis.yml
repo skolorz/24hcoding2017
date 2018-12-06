@@ -16,6 +16,3 @@ script:
 after_success:
   - chmod +x travis/rancher.sh
   - travis/rancher.sh
-
-notifications:
-  slack: inghackathon2017:2LMqEtgvoZB2hSjhes2I5Uup
